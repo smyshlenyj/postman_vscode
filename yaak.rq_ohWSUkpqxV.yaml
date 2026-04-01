@@ -2,13 +2,13 @@ type: http_request
 model: http_request
 id: rq_ohWSUkpqxV
 createdAt: 2026-04-01T11:13:13.742034200
-updatedAt: 2026-04-01T11:13:13.742034600
+updatedAt: 2026-04-01T11:19:39.398599600
 workspaceId: wk_NG5F6DYzr7
 folderId: fl_mxtryQTfai
 authentication: {}
 authenticationType: null
 body:
-  text: "{\r\n   \"appkey\":\"${[appkey]}\",\r\n   \"login\":\"${[login]}\", \r\n   \"password\":\"${[password]}\" \r\n}"
+  text: "{\n   \"appkey\":\"${[appkey]}\",\n   \"login\":\"${[login]}\", \n   \"password\":\"${[password]}\" \n}"
 bodyType: application/json
 description: |-
   [https://dev.dellin.ru/api/auth/login/](https://dev.dellin.ru/api/auth/login/)
