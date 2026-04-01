@@ -1,0 +1,106 @@
+info:
+  name: Отправить геолокацию
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}"
+  headers:
+    - name: User-Agent
+      value: GREEN-API_POSTMAN/1.0
+  body:
+    type: json
+    data: "{\r
+
+      \t\"chatId\": \"10000000\",\r
+
+      \    \"latitude\": 51.1035035,\r
+
+      \    \"longitude\": 71.3996933\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: sendLocation
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \    \"latitude\": 51.1035035,\r
+
+          \    \"longitude\": 71.3996933\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "idMessage": "1762333029830"
+          }
+  - name: sendLocation (empty field)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \    \"latitude\": 51.1035035,\r
+
+          \    \"longitude\": 71.3996933\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T07:04:56.987Z",
+              "path": "/waInstance31000000001/sendLocation/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'chatId' is not allowed to be empty"
+          }
+
+docs: Документация [SendLocation](https://green-api.com/v3/docs/api/sending/SendLocation/)

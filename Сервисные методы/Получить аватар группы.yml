@@ -1,0 +1,235 @@
+info:
+  name: Получить аватар группы
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"chatId\": \"-10000000000000\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getAvatar
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"-10000000000000\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Thu, 21 Aug 2025 12:53:00 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "144"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "9"
+        - name: X-RateLimit-Replenish-Rate
+          value: "10"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"90-d8+YRZLjd+8eDThJGnl8GIgOnNU"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "urlAvatar": "https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI"
+          }
+  - name: getAvatar (empty chatid)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n    \"chatId\": \"\"\r\n}"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Thu, 21 Aug 2025 13:02:16 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "255"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "9"
+        - name: X-RateLimit-Replenish-Rate
+          value: "10"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"ff-9Q4uuqNN9uOgWpQSqhoFgWPX74E"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-21T13:02:16.247Z",
+              "path": "/waInstance3100000001/getAvatar/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' must be one of the next formats: 'user_id' or 'group_id'"
+          }
+  - name: getAvatar ('chatId' must be one of [string])
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getAvatar/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": -10000000000000\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Thu, 21 Aug 2025 13:01:09 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "222"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "9"
+        - name: X-RateLimit-Replenish-Rate
+          value: "10"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"de-qjFwe4LHJ4oeNpT+mrWm4Q7K3hk"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-21T13:01:09.355Z",
+              "path": "/waInstance3100000001/getAvatar/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' must be one of [string]"
+          }
+
+docs: Документация [GetAvatar](https://green-api.com/v3/docs/api/service/GetAvatar)

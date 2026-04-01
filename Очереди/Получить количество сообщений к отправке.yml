@@ -1,0 +1,75 @@
+info:
+  name: Получить количество сообщений к отправке
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getMessagesCount
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getMessagesCount/{{apiTokenInstance}}"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 13 Aug 2025 11:24:22 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "11"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Origin, X-Requested-With, Content-Type, Accept
+        - name: ETag
+          value: W/"b-ch7MNww9+xUYoTgutbGr6VU0GaU"
+      body:
+        type: json
+        data: |-
+          {
+              "count": 0
+          }
+
+docs: Документация [GetMessagesCount](https://green-api.com/v3/docs/api/queues/GetMessagesCount)

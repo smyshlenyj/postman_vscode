@@ -1,0 +1,121 @@
+info:
+  name: Выгрузить файл
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}"
+  headers:
+    - name: User-Agent
+      value: GREEN-API_POSTMAN/1.0
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: uploadFile
+    request:
+      url: "{{mediaUrl}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"10000000\",\r
+
+          \t\"urlFile\": \"https://avatars.mds.yandex.net/get-pdb/477388/77f64197-87d2-42cf-9305-14f49c65f1da/s375\",\r
+
+          \t\"fileName\": \"horse.png\",\r
+
+          \t\"caption\": \"лошадка\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "urlFile": "https://sw-media-out.storage.yandexcloud.net/3100000001/95917013-579d-429f-9145-469865c4a6e8.jpg"
+          }
+  - name: uploadFile (file should not be empty)
+    request:
+      url: "{{mediaUrl}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}"
+      method: VIEW
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Tue, 26 Aug 2025 10:12:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "229"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "49"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Origin, X-Requested-With, Content-Type, Accept
+        - name: ETag
+          value: W/"e5-TXfaRpQYNjxk3YHyIk6kQoEGU40"
+      body:
+        type: json
+        data: file should not be empty
+
+docs: Документация [UploadFile](https://green-api.com/v3/docs/api/sending/UploadFile)

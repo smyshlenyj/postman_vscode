@@ -1,0 +1,384 @@
+info:
+  name: Удалить сообщение
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \t\"chatId\": \"10000000\",\r
+
+      \    \"idMessage\": \"2712345112345\",\r
+
+      \    \"onlySenderDelete\": false // удалить только у отправителя\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: deleteMessage
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \    \"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "17"
+        - name: ETag
+          value: W/"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8"
+        - name: Date
+          value: Thu, 06 Nov 2025 05:00:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: ""
+  - name: deleteMessage (validation failed)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \    \"idMessage\": \"115500988697639805\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "17"
+        - name: ETag
+          value: W/"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8"
+        - name: Date
+          value: Thu, 06 Nov 2025 05:00:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-11-06T05:01:59.357Z",
+              "path": "/waInstance31000000001/deleteMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'chatId' must be one of the next formats: 'phone_number@c.us', 'user_id' (digits only), or 'group_id' (starts with '-' followed by digits)"
+          }
+  - name: deleteMessage (deleting editedMessage)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \    \"idMessage\": \"1155017624059\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "56"
+        - name: ETag
+          value: W/"38-O2IFbr+eRY45G8HGlVVHidmv04w"
+        - name: Date
+          value: Thu, 06 Nov 2025 06:12:10 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: '"Deleting editedMessage type messages is not supported."'
+  - name: deleteMessage (message already was deleted)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \    \"idMessage\": \"1155017624059\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "29"
+        - name: ETag
+          value: W/"1d-cn/i2wRdwlTkkv9rALZ8lv2Iqn8"
+        - name: Date
+          value: Thu, 06 Nov 2025 06:24:36 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: '"Message already was deleted"'
+  - name: deleteMessage (message by id not found)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \    \"idMessage\": \"1155017624059\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "25"
+        - name: ETag
+          value: W/"19-HB6NLbpCkBsgd0Pb3s9hZE2ipyM"
+        - name: Date
+          value: Thu, 06 Nov 2025 06:27:24 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: '"Message by id not found"'
+  - name: deleteMessage (ChatId not found)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"-10000002\",\r
+
+          \    \"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "18"
+        - name: ETag
+          value: W/"12-2rxOYs/Pu63wKttt0A3uzES9X1o"
+        - name: Date
+          value: Thu, 06 Nov 2025 06:32:39 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: '"ChatId not found"'
+
+docs: Документация [DeleteMessage](https://green-api.com/v3/docs/api/service/DeleteMessage)

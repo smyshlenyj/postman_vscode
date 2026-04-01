@@ -1,0 +1,67 @@
+info:
+  name: Получить список чатов
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{apiUrl}}/waInstance{{idInstance}}/GetChats/{{apiTokenInstance}}"
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getChats
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/GetChats/{{apiTokenInstance}}"
+      method: GET
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Thu, 14 Aug 2025 08:33:49 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "154"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "49"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "chatId": "10000000000000",
+                  "phoneNumber": 0
+              },
+              {
+                  "chatId": "100000001",
+                  "phoneNumber": 79001111111
+              },
+              {
+                  "chatId": "100000002",
+                  "phoneNumber": 79002222222
+              }
+          ]
+
+docs: Документация [GetChats](https://green-api.com/v3/docs/api/service/GetChats/)

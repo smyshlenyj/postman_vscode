@@ -1,0 +1,46 @@
+info:
+  name: Превышены ограничения на тарифе
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{webhookUrl}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"typeWebhook\": \"quotaExceeded\",\r
+
+      \    \"instanceData\": {\r
+
+      \        \"idInstance\": 3100000000,\r
+
+      \        \"wid\": \"79991234567@c.us\",\r
+
+      \        \"typeInstance\": \"v3\"\r
+
+      \    },\r
+
+      \    \"quotaData\": {\r
+
+      \        \"method\": \"correspondents\",\r
+
+      \        \"used\": 3,\r
+
+      \        \"total\": 3,\r
+
+      \        \"status\": \"CORRESPONDENTS_QUOTA_EXCEEDED\",\r
+
+      \        \"description\": \"Monthly quota has been exceeded. You can only send or receive messages from following chats: 10000000, 10000001, 10000002. Please go to your personal account and change the tariff to business https://console.green-api.com\"\r
+
+      \    }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

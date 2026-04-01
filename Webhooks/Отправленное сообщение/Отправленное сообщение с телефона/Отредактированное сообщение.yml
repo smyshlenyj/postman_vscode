@@ -1,0 +1,110 @@
+info:
+  name: Отредактированное сообщение
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{webhookUrl}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"typeWebhook\": \"outgoingMessageReceived\",\r
+
+      \  \"instanceData\": {\r
+
+      \    \"idInstance\": 3100000000,\r
+
+      \    \"wid\": \"79991234567@c.us\",\r
+
+      \    \"typeInstance\": \"v3\"\r
+
+      \  },\r
+
+      \  \"timestamp\": 1705895506,\r
+
+      \  \"idMessage\": \"115297976845823798\",\r
+
+      \  \"senderData\": {\r
+
+      \    \"chatId\": \"10000000\",\r
+
+      \    \"sender\": \"10000000\",\r
+
+      \    \"chatName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderPhoneNumber\": 79991112233\r
+
+      \  },\r
+
+      \  \"messageData\": {\r
+
+      \    \"typeMessage\": \"editedMessage\",\r
+
+      \    \"editedMessageData\": {\r
+
+      \        \"textMessage\": \"Отредактированное сообщение\",\r
+
+      \        \"stanzaId\": \"11529797684582123\"\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Отредактированное сообщение в журнале
+    request:
+      url: "{{webhookUrl}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\": \"outgoing\",\r
+
+          \    \"idMessage\": \"115297976845823798\",\r
+
+          \    \"timestamp\": 1705895506,\r
+
+          \    \"typeMessage\": \"textMessage\",\r
+
+          \    \"chatId\": \"10000000\",\r
+
+          \    \"textMessage\": \"Отредактированное сообщение\",\r
+
+          \    \"statusMessage\": \"delivired\",\r
+
+          \    \"sendByApi\": false,\r
+
+          \    \"deletedMessageId\": \"\",\r
+
+          \t\"editedMessageId\": \"11529797684582123\",\r
+
+          \t\"isEdited\": true,\r
+
+          \t\"isDeleted\": false\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Документация [Исходящее отредактированное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/editedMessage)
+
+  Для получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): "outgoingMessageWebhook": "yes"

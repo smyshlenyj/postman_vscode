@@ -1,0 +1,450 @@
+info:
+  name: Добавить участника в группу
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"chatId\": \"-10000000000000\",\r
+
+      \    \"participantChatId\": \"10000000\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: addGroupParticipant (true)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"-10000000000000\",\r
+
+          \    \"participantChatId\": \"10000000\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 11:05:20 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "23"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"17-CvthZXuqS7OHstEEscZXU7jc9A4"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "addParticipant": true
+          }
+  - name: addGroupParticipant (false)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"-10000000000000\",\r
+
+          \    \"participantChatId\": \"-20000000\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 10:51:33 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "24"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"18-SBSDogAJNfR4TIUdak2oA4CWXJY"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "addParticipant": false
+          }
+  - name: addGroupParticipant ('chatId' must be a string)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": -10000000000000,\r
+
+          \    \"participantChatId\": \"10000000\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 11:06:27 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "225"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"e1-T+p6d3kZjvYnF0oeaTt22JQ7SCs"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T11:06:27.858Z",
+              "path": "/waInstance3100000001/addGroupParticipant/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' must be a string"
+          }
+  - name: addGroupParticipant ('participantChatId' must be a string)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"-10000000000000\",\r
+
+          \    \"participantChatId\": 10000000\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 11:06:36 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "236"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"ec-cpdbSSzSiwiTvnzQXODE7HAoZsc"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T11:06:36.623Z",
+              "path": "/waInstance3100000001/addGroupParticipant/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'participantChatId' must be a string"
+          }
+  - name: addGroupParticipant ('chatId' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"participantChatId\": \"10000000\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 11:10:14 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "220"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"dc-BTKyPtdbRV9OSkfgJgbk8AnSP5k"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T11:10:14.926Z",
+              "path": "/waInstance3100000001/addGroupParticipant/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' is required"
+          }
+  - name: addGroupParticipant ('participantChatId' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/addGroupParticipant/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"chatId\": \"-10000000000000\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 11:06:44 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "231"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"e7-M0Ny28/rKCqhREYbt+XHWXx6RBM"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T11:06:44.591Z",
+              "path": "/waInstance3100000001/addGroupParticipant/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'participantChatId' is required"
+          }
+
+docs: Документация [AddGroupParticipant](https://green-api.com/v3/docs/api/groups/AddGroupParticipant/)

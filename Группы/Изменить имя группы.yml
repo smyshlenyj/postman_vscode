@@ -1,0 +1,378 @@
+info:
+  name: Изменить имя группы
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"chatId\": \"-10000000000000\",\r
+
+      \   \"groupName\": \"Group created by Green API+\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: updateGroupName (true)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": \"-10000000000000\",\r
+
+          \   \"groupName\": \"Group created by Green API+\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 08:51:09 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "24"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"18-iMAL/gtWw3F74LbA9BD2Qk3aHjE"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "updateGroupName": true
+          }
+  - name: updateGroupName (false)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": \"-20000000000000\",\r
+
+          \   \"groupName\": \"Not existing group\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 08:50:15 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "25"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"19-35yYylb0S+GvmtqYTMNRQO8Y0PM"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "updateGroupName": false
+          }
+  - name: updateGroupName ('groupName' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": \"-10000000000000\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 08:51:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "219"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"db-LLctSaLnYu85tHhtRc0Gqa6WYDY"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T08:51:58.098Z",
+              "path": "/waInstance3100000001/updateGroupName/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'groupName' is required"
+          }
+  - name: updateGroupName ('chatId' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"groupName\": \"Group created by Green API+\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 08:54:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "216"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"d8-Yj72UGeLxzjvKVpNRxiTdrEIZ0M"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T08:54:40.496Z",
+              "path": "/waInstance3100000001/updateGroupName/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' is required"
+          }
+  - name: updateGroupName ('chatId' must be a string)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/updateGroupName/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": -10000000000000,\r
+
+          \   \"groupName\": \"Group created by Green API+\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 10:27:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "221"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"dd-ufsCLFm5mIDWCCnk9kTznkWRWGs"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T10:27:21.419Z",
+              "path": "/waInstance3100000001/updateGroupName/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' must be a string"
+          }
+
+docs: Документация [UpdateGroupName](https://green-api.com/v3/docs/api/groups/UpdateGroupName/)

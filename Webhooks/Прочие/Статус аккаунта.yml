@@ -1,0 +1,36 @@
+info:
+  name: Статус аккаунта
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{webhookUrl}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"typeWebhook\": \"stateInstanceChanged\",\r
+
+      \  \"instanceData\": {\r
+
+      \    \"idInstance\": 3100000000,\r
+
+      \    \"wid\": \"79991234567@c.us\",\r
+
+      \    \"typeInstance\": \"v3\"\r
+
+      \  },\r
+
+      \  \"timestamp\": 1755589527,\r
+
+      \  \"stateInstance\": \"authorized\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

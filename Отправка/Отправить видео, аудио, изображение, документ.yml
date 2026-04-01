@@ -1,0 +1,190 @@
+info:
+  name: Отправить видео, аудио, изображение, документ
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}"
+  headers:
+    - name: User-Agent
+      value: GREEN-API_POSTMAN/1.0
+  body:
+    type: multipart-form
+    data:
+      - name: chatId
+        type: text
+        value: "10000000"
+        description: Идентификатор чата
+      - name: caption
+        type: text
+        value: Description
+        description: Описание под файлом
+        disabled: true
+      - name: file
+        type: file
+        value:
+          - /C:/horse.png
+        description: Отправляемый файл
+      - name: fileName
+        type: text
+        value: horse.png
+        description: Название файла
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: sendFileByUpload
+    request:
+      url: "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}"
+      method: VIEW
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+      body:
+        type: multipart-form
+        data:
+          - name: chatId
+            type: text
+            value: "10000000"
+            description: Идентификатор чата
+          - name: caption
+            type: text
+            value: Description
+            description: Описание под файлом
+            disabled: true
+          - name: file
+            type: file
+            value:
+              - /C:/horse.png
+            description: Отправляемый файл
+          - name: fileName
+            type: text
+            value: horse.png
+            description: Название файла
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Tue, 26 Aug 2025 08:29:27 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "190"
+        - name: Connection
+          value: keep-alive
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+      body:
+        type: json
+        data: |-
+          {
+              "idMessage": "2712345112345"
+          }
+  - name: sendFileByUpload (empty chatId)
+    request:
+      url: "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}"
+      method: VIEW
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+      body:
+        type: multipart-form
+        data:
+          - name: chatId
+            type: text
+            value: ""
+            description: Идентификатор чата
+          - name: caption
+            type: text
+            value: Description
+            description: Описание под файлом
+            disabled: true
+          - name: file
+            type: file
+            value:
+              - /C:/horse.png
+            description: Отправляемый файл
+          - name: fileName
+            type: text
+            value: horse.png
+            description: Название файла
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Tue, 26 Aug 2025 08:34:05 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "146"
+        - name: Connection
+          value: keep-alive
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T07:04:56.987Z",
+              "path": "/waInstance3100000001/sendFileByUpload/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' is not allowed to be empty"
+          }
+  - name: sendFileByUpload (empty file)
+    request:
+      url: "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUpload/{{apiTokenInstance}}"
+      method: VIEW
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+      body:
+        type: multipart-form
+        data:
+          - name: chatId
+            type: text
+            value: "10000000"
+            description: Идентификатор чата
+          - name: caption
+            type: text
+            value: Description
+            description: Описание под файлом
+            disabled: true
+          - name: file
+            type: file
+            value: []
+            description: Отправляемый файл
+          - name: fileName
+            type: text
+            value: horse.png
+            description: Название файла
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Tue, 26 Aug 2025 08:29:27 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "190"
+        - name: Connection
+          value: keep-alive
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+      body:
+        type: json
+        data: File is empty
+
+docs: Документация [SendFileByUpload](https://green-api.com/v3/docs/api/sending/SendFileByUpload)

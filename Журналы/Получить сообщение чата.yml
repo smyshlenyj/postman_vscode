@@ -1,0 +1,157 @@
+info:
+  name: Получить сообщение чата
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"chatId\": \"100000000\",\r
+
+      \  \"idMessage\": \"115019397480660314\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: incomingTextMessage
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"100000000\",\r
+
+          \t\"idMessage\": \"126543123451133331119\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "type": "incoming",
+              "idMessage": "126543123451133331119",
+              "timestamp": 1706522263,
+              "typeMessage": "textMessage",
+              "chatId": "100000001",
+              "textMessage": "Я использую GREEN-API для отправки этого сообщения!",
+              "senderId": "100000001",
+              "senderName": "Ходабрыш Пробешёлов",
+              "senderContactName": "Ходабрыш Пробешёлов",
+              "deletedMessageId": "",
+              "editedMessageId": "",
+              "isEdited": false,
+              "isDeleted": false
+          }
+  - name: outgoingTextMessage
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"100000000\",\r
+
+          \t\"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "type": "outgoing",
+              "idMessage": "2712345112345",
+              "timestamp": 1706761225,
+              "typeMessage": "textMessage",
+              "chatId": "100000001",
+              "textMessage": "Я использую GREEN-API для отправки этого сообщения!",
+              "statusMessage": "sent",
+              "sendByApi": true,
+              "deletedMessageId": "",
+              "editedMessageId": "",
+              "isEdited": false,
+              "isDeleted": false
+          }
+  - name: Message Id validation failed
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"100000000\",\r
+
+          \t\"idMessage\": \"\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T09:09:08.762973033Z",
+              "path": "/waInstance31000000001/getMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "'message id' must be at least 10 symbols"
+          }
+  - name: chatId validation failed
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \t\"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T09:09:34.06446652Z",
+              "path": "/waInstance31000000001/getMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "'chatId' must be one of the next formats: 'chat_id' or 'group_id'"
+          }
+
+docs: Документация [GetMessage](https://green-api.com/v3/docs/api/journals/GetMessage/)

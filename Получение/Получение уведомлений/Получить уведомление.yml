@@ -1,0 +1,65 @@
+info:
+  name: Получить уведомление
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{apiUrl}}/waInstance{{idInstance}}/receiveNotification/{{apiTokenInstance}}?receiveTimeout=5"
+  params:
+    - name: receiveTimeout
+      value: "5"
+      type: query
+      description: Таймаут ожидания уведомления, принимает значение от 5 до 60 секунд
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: receiveNotification
+    request:
+      url: "{{apiUrl}}/v3/waInstance{{idInstance}}/receiveNorification/{{apiTokenInstance}}?receiveTimeout=5"
+      method: VIEW
+      params:
+        - name: receiveTimeout
+          value: "5"
+          type: query
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Content-Type
+          value: application/json
+      body:
+        type: json
+        data: |-
+          {
+              "receiptId": 1234567,
+              "body": {
+                  "typeWebhook": "incomingMessageReceived",
+                  "instanceData": {
+                      "idInstance": 310000001,
+                      "wid": "79991234567@c.us",
+                      "typeInstance": "v3"
+                  },
+                  "timestamp": 1588091580,
+                  "idMessage": "126543123451133331119",
+                  "senderData": {
+                      "chatId": "100000123",
+                      "sender": "100000123",
+                      "senderName": "Green API"
+                  },
+                  "messageData": {
+                      "typeMessage": "textMessage",
+                      "textMessageData": {
+                          "textMessage": "Привет от Green-API!"
+                      }
+                  }
+              }
+          }
+
+docs: Документация [ReceiveNotification](https://green-api.com/v3/docs/api/receiving/technology-http-api/ReceiveNotification/)

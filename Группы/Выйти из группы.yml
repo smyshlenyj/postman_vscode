@@ -1,0 +1,296 @@
+info:
+  name: Выйти из группы
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"chatId\": \"-10000000000000\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: leaveGroup (true)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": \"-10000000000000\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 12:52:28 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "20"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"14-a7Pqm9UwMZEmSVVoJW9cLQAhkxw"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "leaveGroup": true
+          }
+  - name: leaveGroup (false)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": \"-20000000000000\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 12:52:28 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "20"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"14-a7Pqm9UwMZEmSVVoJW9cLQAhkxw"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "leaveGroup": false
+          }
+  - name: leaveGroup ('chatId' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r\n   \r\n}"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 08:54:40 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "216"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"d8-Yj72UGeLxzjvKVpNRxiTdrEIZ0M"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T08:54:40.496Z",
+              "path": "/waInstance3100000001/leaveGroup/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' is required"
+          }
+  - name: leaveGroup ('chatId' must be a string)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/leaveGroup/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \   \"chatId\": -10000000000000\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Date
+          value: Wed, 03 Sep 2025 10:27:21 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "221"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "-1"
+        - name: X-RateLimit-Replenish-Rate
+          value: "50"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"dd-ufsCLFm5mIDWCCnk9kTznkWRWGs"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-09-03T10:27:21.419Z",
+              "path": "/waInstance3100000001/leaveGroup/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' must be a string"
+          }
+
+docs: Документация [LeaveGroup](https://green-api.com/v3/docs/api/groups/LeaveGroup/)

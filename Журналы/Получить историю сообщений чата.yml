@@ -1,0 +1,125 @@
+info:
+  name: Получить историю сообщений чата
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/getChatHistory/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \t\"chatId\": \"100000001\",\r
+
+      \t\"count\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getChatHistory
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getChatHistory/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"100000001\",\r
+
+          \    \"count\": 2\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "type": "outgoing",
+                  "idMessage": "2756781234554",
+                  "timestamp": 1587412276,
+                  "typeMessage": "textMessage",
+                  "chatId": "100000001",
+                  "textMessage": "Я использую GREEN-API для отправки этого сообщения!",
+                  "statusMessage": "sent",
+                  "sendByApi": true,
+                  "deletedMessageId": "",
+                  "editedMessageId": "",
+                  "isEdited": false,
+                  "isDeleted": false
+              },
+              {
+                  "type": "incoming",
+                  "idMessage": "126543123451133331119",
+                  "timestamp": 1706522263,
+                  "typeMessage": "textMessage",
+                  "chatId": "100000001",
+                  "textMessage": "Я использую GREEN-API для отправки этого сообщения!",
+                  "senderId": "100000001",
+                  "senderName": "Ходабрыш Пробешёлов",
+                  "senderContactName": "Ходабрыш Пробешёлов",
+                  "deletedMessageId": "",
+                  "editedMessageId": "",
+                  "isEdited": false,
+                  "isDeleted": false
+              }
+          ]
+  - name: getChatHistory (validation failed)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getChatHistory/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \    \"count\": 2\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T09:07:51.361526584Z",
+              "path": "/waInstance31000000001/getChatHistory/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'chatId' must be one of the next formats: 'chat_id' or 'group_id'"
+          }
+
+docs: Документация [GetChatHistory](https://green-api.com/v3/docs/api/journals/GetChatHistory/)

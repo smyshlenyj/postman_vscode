@@ -1,0 +1,140 @@
+info:
+  name: Сообщение с изображением
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{webhookUrl}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"typeWebhook\": \"incomingMessageReceived\",\r
+
+      \  \"instanceData\": {\r
+
+      \    \"idInstance\": 3100000000,\r
+
+      \    \"wid\": \"79991234567@c.us\",\r
+
+      \    \"typeInstance\": \"v3\"\r
+
+      \  },\r
+
+      \  \"timestamp\": 1588091580,\r
+
+      \  \"idMessage\": \"2755232962562\",\r
+
+      \  \"senderData\": {\r
+
+      \    \"chatId\": \"10000000\",\r
+
+      \    \"sender\": \"10000000\",\r
+
+      \    \"chatName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderPhoneNumber\": 79991112233\r
+
+      \  },\r
+
+      \  \"messageData\": {\r
+
+      \    \"typeMessage\": \"imageMessage\",\r
+
+      \    \"fileMessageData\": {\r
+
+      \      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/15697d2c-397c-4fd0-8e1a-8be95f753aae.webp\",\r
+
+      \      \"caption\": \"\",\r
+
+      \      \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.webp\",\r
+
+      \      \"jpegThumbnail\": \"UklGRjoAAABXRUJQVlA4IC4AAACwAwCdASoyADIAPm0skkYkIqGhLggAgA2JaQAAZAEm0xUUDzF5wAD++yGAAAAA\",\r
+
+      \      \"isAnimated\": false,\r
+
+      \      \"mimeType\": \"image/webp\",\r
+
+      \      \"forwardingScore\": 0,\r
+
+      \      \"isForwarded\": false\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Сообщение с изображением в журнале
+    request:
+      url: "{{webhookUrl}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \  \"type\": \"incoming\",\r
+
+          \  \"idMessage\": \"2755232962562\",\r
+
+          \  \"timestamp\": 1588091580,\r
+
+          \  \"typeMessage\": \"imageMessage\",\r
+
+          \  \"chatId\": \"10000000\",\r
+
+          \  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/15697d2c-397c-4fd0-8e1a-8be95f753aae.webp\",\r
+
+          \  \"caption\": \"\",\r
+
+          \  \"fileName\": \"15697d2c-397c-4fd0-8e1a-8be95f753aae.webp\",\r
+
+          \  \"jpegThumbnail\": \"UklGRjoAAABXRUJQVlA4IC4AAACwAwCdASoyADIAPm0skkYkIqGhLggAgA2JaQAAZAEm0xUUDzF5wAD++yGAAAAA\",\r
+
+          \  \"mimeType\": \"image/webp\",\r
+
+          \  \"isAnimated\": false,\r
+
+          \  \"isForwarded\": false,\r
+
+          \  \"forwardingScore\": 0,\r
+
+          \  \"senderId\": \"10000000\",\r
+
+          \  \"senderName\": \"Ходабрыш Пробешёлов\",\r
+
+          \  \"senderContactName\": \"Ходабрыш Пробешёлов\",\r
+
+          \  \"editedMessageId\": \"\",\r
+
+          \  \"deletedMessageId\": \"\",\r
+
+          \  \"videoNote\": false,\r
+
+          \  \"isEdited\": false,\r
+
+          \  \"isDeleted\": false\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Документация [Входящее сообщение с изображением](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)
+
+  Для получения данного типа уведомления необходимо включить настройку "incomingWebhook": "yes" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)

@@ -1,0 +1,159 @@
+info:
+  name: Редактировать сообщение
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}"
+  body:
+    type: json
+    data: "{\r
+
+      \t\"chatId\": \"10000000\",\r
+
+      \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+      \    \"idMessage\": \"2712345112345\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: editMessage
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+          \    \"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "17"
+        - name: ETag
+          value: W/"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8"
+        - name: Date
+          value: Thu, 06 Nov 2025 05:00:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "idMessage": "2712345112345"
+          }
+  - name: editMessage (validation failed)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+          \    \"idMessage\": \"2712345112345\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: X-DNS-Prefetch-Control
+          value: off
+        - name: Expect-CT
+          value: max-age=0
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: Strict-Transport-Security
+          value: max-age=15552000; includeSubDomains
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: X-XSS-Protection
+          value: "0"
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "17"
+        - name: ETag
+          value: W/"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8"
+        - name: Date
+          value: Thu, 06 Nov 2025 05:00:48 GMT
+        - name: Connection
+          value: keep-alive
+        - name: Keep-Alive
+          value: timeout=5
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-11-06T05:01:59.357Z",
+              "path": "/waInstance31000000001/editMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'chatId' must be one of the next formats: 'phone_number@c.us', 'user_id' (digits only), or 'group_id' (starts with '-' followed by digits)"
+          }
+
+docs: Документация [EditMessage](https://green-api.com/v3/docs/api/service/EditMessage)

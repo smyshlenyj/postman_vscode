@@ -1,0 +1,63 @@
+info:
+  name: Получить контакты
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{apiUrl}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: getContacts
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/getContacts/{{apiTokenInstance}}"
+      method: VIEW
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Mon, 20 Apr 2020 19:54:33 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "458"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          [
+              {
+          		"chatId": "100000000",
+          		"name": "Ходабрыш Пробешёлов",
+          		"contactName": "Ходабрыш Пробешёлов",
+          		"type": "user",
+                  "phoneNumber": 79001111111
+          	},
+          	{
+          		"chatId": "100000001",
+          		"name": "Люся Сидорова",
+          		"contactName": "Люся Сидорова",
+          		"type": "user",
+                  "phoneNumber": 79002222222
+          	},
+          	{
+          		"chatId": "100000002",
+          		"name": "Вася Петров",
+          		"contactName": "Вася Петров",
+          		"type": "user",
+                  "phoneNumber": 79003333333
+          	}
+          ]
+
+docs: Документация [GetContacts](https://green-api.com/v3/docs/api/service/GetContacts/)

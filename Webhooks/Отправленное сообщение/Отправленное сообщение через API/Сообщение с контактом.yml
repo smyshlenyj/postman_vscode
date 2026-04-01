@@ -1,0 +1,136 @@
+info:
+  name: Сообщение с контактом
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{webhookUrl}}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r
+
+      \  \"instanceData\": {\r
+
+      \    \"idInstance\": 3100000000,\r
+
+      \    \"wid\": \"79991234567@c.us\",\r
+
+      \    \"typeInstance\": \"v3\"\r
+
+      \  },\r
+
+      \  \"timestamp\": 1588091580,\r
+
+      \  \"idMessage\": \"2755232962562\",\r
+
+      \  \"senderData\": {\r
+
+      \    \"chatId\": \"10000000\",\r
+
+      \    \"sender\": \"10000000\",\r
+
+      \    \"chatName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r
+
+      \    \"senderPhoneNumber\": 79991112233\r
+
+      \  },\r
+
+      \  \"messageData\": {\r
+
+      \    \"typeMessage\": \"contactMessage\",\r
+
+      \    \"contactMessageData\": {\r
+
+      \      \"chatId\": \"10000000\",\r
+
+      \      \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r
+
+      \      \"phoneNumber\": 79991112233,\r
+
+      \      \"displayName\": \"Ходабрыш Пробешёлов\",\r
+
+      \      \"vcard\": \"\",\r
+
+      \      \"forwardingScore\": 0,\r
+
+      \      \"isForwarded\": false\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Сообщение с контактом в журнале
+    request:
+      url: "{{webhookUrl}}"
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \    \"type\": \"outgoing\",\r
+
+          \    \"idMessage\": \"2755232962562\",\r
+
+          \    \"timestamp\": 1705895506,\r
+
+          \    \"typeMessage\": \"contactMessage\",\r
+
+          \    \"chatId\": \"10000000\",\r
+
+          \    \"contact\": {\r
+
+          \        \"chatId\": \"10000000\",\r
+
+          \        \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r
+
+          \        \"phoneNumber\": 79991112233,\r
+
+          \        \"displayName\": \"Ходабрыш Пробешёлов\",\r
+
+          \        \"vcard\": \"\",\r
+
+          \        \"forwardingScore\": 0,\r
+
+          \        \"isForwarded\": false\r
+
+          \    },\r
+
+          \    \"statusMessage\": \"read\",\r
+
+          \    \"sendByApi\": true,\r
+
+          \    \"deletedMessageId\": \"\",\r
+
+          \t\"editedMessageId\": \"\",\r
+
+          \t\"isEdited\": false,\r
+
+          \t\"isDeleted\": false\r
+
+          }"
+    response:
+      body:
+        type: text
+        data: ""
+
+docs: |-
+  Документация [Исходящее сообщение с контактом](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/contactMessage)
+
+  Для получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): "outgoingAPIMessageWebhook": "yes"

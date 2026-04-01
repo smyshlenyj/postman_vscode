@@ -1,0 +1,168 @@
+info:
+  name: Отметить чат прочитанным
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}"
+  headers:
+    - name: User-Agent
+      value: GREEN-API_POSTMAN/1.0
+  body:
+    type: json
+    data: "{\r\n\t\"chatId\": \"10000000\"\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: readChat
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}"
+      method: POST
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+      body:
+        type: json
+        data: "{\r\n\t\"chatId\": \"10000000\"\r\n}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Thu, 21 Aug 2025 12:38:26 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "16"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "9"
+        - name: X-RateLimit-Replenish-Rate
+          value: "10"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"10-jNFvod4kYhwNqrU7VX0pqApDWVg"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "setRead": true
+          }
+  - name: readChat ('chatId' is required)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/readChat/{{apiTokenInstance}}"
+      method: POST
+      headers:
+        - name: User-Agent
+          value: GREEN-API_POSTMAN/1.0
+      body:
+        type: json
+        data: "{\r
+
+          \    \"idMessage\": \"2755235290043\"\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Thu, 21 Aug 2025 12:44:47 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "209"
+        - name: Connection
+          value: keep-alive
+        - name: Vary
+          value: Origin
+        - name: Vary
+          value: Access-Control-Request-Method
+        - name: Vary
+          value: Access-Control-Request-Headers
+        - name: X-RateLimit-Remaining
+          value: "9"
+        - name: X-RateLimit-Replenish-Rate
+          value: "10"
+        - name: Access-Control-Allow-Headers
+          value: Content-Type, Accept
+        - name: Access-Control-Allow-Methods
+          value: GET,PUT,POST,DELETE
+        - name: Access-Control-Allow-Origin
+          value: "*"
+        - name: Content-Security-Policy
+          value: "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+        - name: Etag
+          value: W/"d1-BKS2xm3q/+anF4jeXOzS/+4i5EE"
+        - name: Expect-Ct
+          value: max-age=0
+        - name: Referrer-Policy
+          value: no-referrer
+        - name: Strict-Transport-Security
+          value: max-age=31536000; includeSubDomains
+        - name: X-Content-Type-Options
+          value: nosniff
+        - name: X-Dns-Prefetch-Control
+          value: off
+        - name: X-Download-Options
+          value: noopen
+        - name: X-Frame-Options
+          value: SAMEORIGIN
+        - name: X-Permitted-Cross-Domain-Policies
+          value: none
+        - name: X-Xss-Protection
+          value: "0"
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-21T12:44:47.117Z",
+              "path": "/waInstance3100000001/readChat/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf",
+              "message": "Validation failed. Details: 'chatId' is required"
+          }
+
+docs: Документация [ReadChat](https://green-api.com/v3/docs/api/marks/ReadChat/)

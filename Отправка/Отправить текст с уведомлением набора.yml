@@ -1,0 +1,144 @@
+info:
+  name: Отправить текст с уведомлением набора
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}"
+  headers:
+    - name: User-Agent
+      value: GREEN-API_POSTMAN/1.0
+  body:
+    type: json
+    data: "{\r
+
+      \t\"chatId\": \"10000000\",\r
+
+      \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+      \    \"typingTime\": 10000\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: sendMessage
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+          \    \"typingTime\": 10000\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "idMessage": "2712345112345"
+          }
+  - name: sendMessage (empty chatId)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"\",\r
+
+          \t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r
+
+          \    \"typingTime\": 10000\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T07:04:56.987Z",
+              "path": "/waInstance31000000001/sendMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'chatId' is not allowed to be empty"
+          }
+  - name: sendMessage (empty message)
+    request:
+      url: "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}"
+      method: VIEW
+      body:
+        type: json
+        data: "{\r
+
+          \t\"chatId\": \"10000000\",\r
+
+          \t\"message\": \"\",\r
+
+          \    \"typingTime\": 10000\r
+
+          }"
+    response:
+      status: 400
+      statusText: Bad Request
+      headers:
+        - name: Server
+          value: nginx
+        - name: Date
+          value: Fri, 17 Apr 2020 13:14:58 GMT
+        - name: Content-Type
+          value: application/json
+        - name: Content-Length
+          value: "41"
+        - name: Connection
+          value: keep-alive
+      body:
+        type: json
+        data: |-
+          {
+              "statusCode": 400,
+              "timestamp": "2025-08-15T07:04:56.987Z",
+              "path": "/waInstance31000000001/sendMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8",
+              "message": "Validation failed. Details: 'message' is not allowed to be empty"
+          }
+
+docs: Документация [SendMessage](https://green-api.com/v3/docs/api/sending/SendMessage/)
