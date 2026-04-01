@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_mF6idL9Lws
+createdAt: 2026-04-01T11:13:13.749169500
+updatedAt: 2026-04-01T11:13:13.749169600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_R8cfv4qGSC
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"cauid\":\"00000000-0000-0000-0000-000000000000\",\r\n   \"month\":1,\r\n   \"year\":2020\r\n}"
+bodyType: application/json
+description: '[Взаиморасчеты](https://dev.dellin.ru/api/payments/accounting/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Взаиморасчеты (v2/mutual_calculations.json)
+sortPriority: 99.0
+url: ${[base_url]}/v2/mutual_calculations.json
+urlParameters: []

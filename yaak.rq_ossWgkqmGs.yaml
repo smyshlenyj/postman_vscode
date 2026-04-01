@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_ossWgkqmGs
+createdAt: 2026-04-01T11:13:13.751503800
+updatedAt: 2026-04-01T11:13:13.751503900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_DYHsXuYCT7
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\"\r\n}\r\n\r\n\r\n"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Дополнительные услуги (v1/public/request_services.json)
+sortPriority: 143.0
+url: ${[base_url]}/v1/public/request_services.json
+urlParameters: []

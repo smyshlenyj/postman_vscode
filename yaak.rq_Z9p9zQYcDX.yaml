@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_Z9p9zQYcDX
+createdAt: 2026-04-01T11:13:13.751687400
+updatedAt: 2026-04-01T11:13:13.751687400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_UzZUUFkSAp
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/directories/#_header11](https://dev.dellin.ru/api/catalogs/directories/#_header11)
+
+  Используется при расчёте стоимости услуги "Доставка до адреса". См. метод "[Калькулятор услуги Доставка до адреса](https://dev.dellin.ru/api/calculation/delivery/)"
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Услуги ПРР (v1/public/load_params.json)
+sortPriority: 147.0
+url: ${[base_url]}/v1/public/load_params.json
+urlParameters: []

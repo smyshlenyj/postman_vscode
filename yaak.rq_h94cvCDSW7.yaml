@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_h94cvCDSW7
+createdAt: 2026-04-01T11:13:13.749068
+updatedAt: 2026-04-01T11:13:13.749068200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_iTe5BgEwgB
+authentication: {}
+authenticationType: null
+body:
+  text: "{   \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"counteragentIDs\":[\r\n      123,\r\n      345\r\n   ],\r\n   \"addressIDs\":[\r\n      3,\r\n      2,\r\n      1\r\n   ],\r\n   \"phoneIDs\":[\r\n      1,\r\n      2\r\n   ],\r\n   \"contactIDs\":[\r\n      1,\r\n      2,\r\n      3\r\n   ]\r\n}"
+bodyType: application/json
+description: '[Удаление объектов из адресной книги](https://dev.dellin.ru/api/book/delete/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Удаление объектов из адресной книги (v2/book/delete.json)
+sortPriority: 96.0
+url: ${[base_url]}/v2/book/delete.json
+urlParameters: []

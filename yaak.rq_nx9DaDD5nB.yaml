@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_nx9DaDD5nB
+createdAt: 2026-04-01T11:13:13.751787100
+updatedAt: 2026-04-01T11:13:13.751787300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_PbDhsB5As6
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}\r\n"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/directories/#_header12](https://dev.dellin.ru/api/catalogs/directories/#_header12)
+
+  Используется при проверке ограничений и возможных значений параметров в зависимости от условий заказа. См. метод "[Проверка ограничений](https://dev.dellin.ru/api/catalogs/request-conditions/)"
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Виды доставки (v1/public/request_delivery_types.json)
+sortPriority: 149.0
+url: ${[base_url]}/v1/public/request_delivery_types.json
+urlParameters: []

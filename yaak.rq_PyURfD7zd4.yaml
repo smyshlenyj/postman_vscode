@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_PyURfD7zd4
+createdAt: 2026-04-01T11:13:13.746344900
+updatedAt: 2026-04-01T11:13:13.746345
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_9c3Bo9EvXc
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": 999999990 //Номер заказа, по которому необходимо проверить возможность изменения данных\r\n}"
+bodyType: application/json
+description: '[Доступные изменения заказа](https://dev.dellin.ru/api/order/check/)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Доступные изменения заказа (v3/orders/change_available.json)
+sortPriority: 57.0
+url: ${[base_url]}/v3/orders/change_available.json
+urlParameters: []

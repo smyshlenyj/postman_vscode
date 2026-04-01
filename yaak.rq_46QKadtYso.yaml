@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_46QKadtYso
+createdAt: 2026-04-01T11:13:13.742682500
+updatedAt: 2026-04-01T11:13:13.742682600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_T9er8ofE7y
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"cauid\": \"00000000-0000-0000-0000-000000000000\",\r\n    \"fullInfo\": true\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/auth/counteragents/](https://dev.dellin.ru/api/auth/counteragents/)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Список контрагентов (v2/counteragents.json)
+sortPriority: 7.0
+url: ${[base_url]}/v2/counteragents.json
+urlParameters: []

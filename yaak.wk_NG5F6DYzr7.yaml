@@ -1,0 +1,15 @@
+type: workspace
+model: workspace
+id: wk_NG5F6DYzr7
+createdAt: 2026-04-01T11:13:13.739867800
+updatedAt: 2026-04-01T11:13:13.739868400
+authentication: {}
+authenticationType: null
+description: "API Деловых Линий – это набор сервисов, открытых для использования сторонними разработчиками. Наш API может быть использован как в самостоятельных проектах, так и в проектах по расширению функциональности, направленных на автоматизацию взаимодействия с Деловыми Линиями.\n\nКак начать работать\n\n1. [Зарегистрируйтесь](https://dev.dellin.ru/registration/) на сайте для разработчиков.\n2. Получите API-ключ на адрес электронной почты. Это идентификатор вашего приложения при выполнении всех запросов.\n3. Разработайте собственное решение на основе нашего API.\n    \n\nAPI Деловых Линий предоставляется бесплатно.\n\nПодробнее о возможностях API Деловых Линий вы можете узнать на [сайте для разработчиков](https://dev.dellin.ru/)."
+headers: []
+name: API Деловые Линии (json)
+encryptionKeyChallenge: null
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0
+settingDnsOverrides: []

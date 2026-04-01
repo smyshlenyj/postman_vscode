@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_bdNWWwWaNW
+createdAt: 2026-04-01T11:13:13.752375900
+updatedAt: 2026-04-01T11:13:13.752376
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_n5a6pekyZH
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/catalogs/directories/#_header32](https://dev.dellin.ru/api/catalogs/directories/#_header32)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Статусы заказа груза (v1/references/statuses.json)
+sortPriority: 161.0
+url: ${[base_url]}/v1/references/statuses.json
+urlParameters: []

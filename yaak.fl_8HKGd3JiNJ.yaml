@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_8HKGd3JiNJ
+createdAt: 2026-04-01T11:13:13.754359900
+updatedAt: 2026-04-01T11:13:13.754359900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zdyqRyLWtP
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Дополнение заказа доставкой
+sortPriority: 22.0

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_fHPofUhovw
+createdAt: 2026-04-01T11:13:13.750140800
+updatedAt: 2026-04-01T11:13:13.750140900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_xtNJCaD9r2
+authentication: {}
+authenticationType: null
+body:
+  text: "{  \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"cityID\":12345,\r\n   \"code\":\"1000000100000010000000000\",\r\n   \"street\":\"Авто\",\r\n   \"limit\":2\r\n}"
+bodyType: application/json
+description: '[Поиск улиц](https://dev.dellin.ru/api/places/search/#_header21)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск улиц (v1/public/kladr_street.json)
+sortPriority: 117.0
+url: ${[base_url]}/v1/public/kladr_street.json
+urlParameters: []

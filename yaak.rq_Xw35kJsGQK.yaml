@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_Xw35kJsGQK
+createdAt: 2026-04-01T11:13:13.745381300
+updatedAt: 2026-04-01T11:13:13.745381400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zgXjqNTNrz
+authentication: {}
+authenticationType: null
+body:
+  text: "{   \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"requestsfID\": \"12345\"\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/orders/print/#_header17](https://dev.dellin.ru/api/orders/print/#_header17)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Печатные формы заявки на отвоз (v1/customers/request_sf/pdf.json)
+sortPriority: 45.0
+url: ${[base_url]}/v1/customers/request_sf/pdf.json
+urlParameters: []

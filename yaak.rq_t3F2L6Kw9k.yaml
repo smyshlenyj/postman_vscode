@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_t3F2L6Kw9k
+createdAt: 2026-04-01T11:13:13.751242400
+updatedAt: 2026-04-01T11:13:13.751242500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zwcgmwF8Cs
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"page\": \"1\",\r\n    \"name\": \"личные вещи\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/freight-types/#_header2](https://dev.dellin.ru/api/catalogs/freight-types/#_header2)
+
+  Характер груза: поиск по строке (перевозка сборных грузов)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск характера груза LTL (v1/public/freight_types/search.json)
+sortPriority: 137.0
+url: ${[base_url]}/v1/public/freight_types/search.json
+urlParameters: []

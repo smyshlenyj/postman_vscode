@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_NRDj8SASpr
+createdAt: 2026-04-01T11:13:13.754739300
+updatedAt: 2026-04-01T11:13:13.754739400
+workspaceId: wk_NG5F6DYzr7
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Информация по заказам
+sortPriority: 35.0

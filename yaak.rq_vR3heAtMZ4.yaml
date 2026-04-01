@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_vR3heAtMZ4
+createdAt: 2026-04-01T11:13:13.744976700
+updatedAt: 2026-04-01T11:13:13.744976800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_68FLqYeeJz
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"docIds\":[\r\n      \"400267443\",\r\n      \"400267444\"\r\n   ],\r\n   \"webOrderNumber\":\"935743976\"\r\n}"
+bodyType: application/json
+description: '[История статусов заказа](https://dev.dellin.ru/api/orders/statuses-history/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: История статусов заказа (v3/orders/statuses_history.json)
+sortPriority: 39.0
+url: ${[base_url]}/v3/orders/statuses_history.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_QCraRhNTrH
+createdAt: 2026-04-01T11:13:13.749667200
+updatedAt: 2026-04-01T11:13:13.749667200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_nx5mZPq8Rb
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: '[Справочник населенных пунктов](https://dev.dellin.ru/api/places/directories/#_header10)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Справочник населенных пунктов (v1/public/places.json)
+sortPriority: 111.0
+url: ${[base_url]}/v1/public/places.json
+urlParameters: []

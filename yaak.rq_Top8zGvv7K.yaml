@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_Top8zGvv7K
+createdAt: 2026-04-01T11:13:13.751153300
+updatedAt: 2026-04-01T11:13:13.751153400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_J5AHxwFLPy
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n   \"title\":\"Отк\", // Запрос может содержать только один из параметров: \"title\" или \"name\"\r\n   \"name\":\"ОАО\",\r\n   \"countryUID\":\"0x8f51001438c4d49511dbd774581edb7a\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/opf/](https://dev.dellin.ru/api/catalogs/opf/)
+
+  Данный справочник содержит перечень видов организационно-правовых форм (ОПФ).
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск ОПФ (v1/references/opf_list.json)
+sortPriority: 135.0
+url: ${[base_url]}/v1/references/opf_list.json
+urlParameters: []

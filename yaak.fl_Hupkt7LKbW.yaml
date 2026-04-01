@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_Hupkt7LKbW
+createdAt: 2026-04-01T11:13:13.754018600
+updatedAt: 2026-04-01T11:13:13.754018700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_AF3kVDYGWu
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Калькулятор услуги Доставка до адреса
+sortPriority: 11.0

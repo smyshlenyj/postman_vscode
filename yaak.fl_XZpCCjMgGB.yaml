@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_XZpCCjMgGB
+createdAt: 2026-04-01T11:13:13.757131500
+updatedAt: 2026-04-01T11:13:13.757131700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_KukPrBzPUR
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Подбор даты доставки
+sortPriority: 125.0

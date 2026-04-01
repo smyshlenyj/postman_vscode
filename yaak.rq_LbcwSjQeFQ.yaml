@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_LbcwSjQeFQ
+createdAt: 2026-04-01T11:13:13.742315
+updatedAt: 2026-04-01T11:13:13.742315100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_mxtryQTfai
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\":\"${[appkey]}\",\r\n    \"pat\": \"dl-api-00000000000000000000000000000000000000\"\r\n}\r\n\r\n// pat - Токен. Сгенерировать токен можно в личном кабинете сайта: https://www.dellin.ru/cabinet/account/pat/.\r\n// Срок действия токена - 365 дней. За 6 дней до истечения срока действия токена на электронную почту / по СМС будет направлено уведомление"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Авторизация по токену (v4/auth/login.json)
+sortPriority: 3.0
+url: ${[base_url]}/v4/auth/login.json
+urlParameters: []

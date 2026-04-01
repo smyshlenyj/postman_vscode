@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_A2BzWshPsg
+createdAt: 2026-04-01T11:13:13.745670700
+updatedAt: 2026-04-01T11:13:13.745670800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cTaVvyn25J
+authentication: {}
+authenticationType: null
+body:
+  text: "// В адрес метода вместо {id} следует подставить идентификатор подписки.\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"orderNumbers\":[\r\n      \"8216702228554\",\r\n      \"8217711111041\"\r\n   ]\r\n}"
+bodyType: application/json
+description: |-
+  [Добавление заказов в подписку](https://dev.dellin.ru/api/orders/webhook/#_header12)
+
+  В адрес метода вместо {id} следует подставить идентификатор подписки.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Добавление заказов в подписку (v1/webhooks/{id}/orders/add.json)
+sortPriority: 48.0
+url: ${[base_url]}/v1/webhooks/{id}/orders/add.json
+urlParameters: []

@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_AF3kVDYGWu
+createdAt: 2026-04-01T11:13:13.753900700
+updatedAt: 2026-04-01T11:13:13.753900800
+workspaceId: wk_NG5F6DYzr7
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Выполнение расчета
+sortPriority: 8.0

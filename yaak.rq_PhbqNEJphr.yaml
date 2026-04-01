@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_PhbqNEJphr
+createdAt: 2026-04-01T11:13:13.752473
+updatedAt: 2026-04-01T11:13:13.752473100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_jdpfhEkGLq
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/directories/#_header38](https://dev.dellin.ru/api/catalogs/directories/#_header38)
+
+  Данный метод позволяет получить список всех возможных событий для настройки подписок на уведомления о событиях по заказам. Используется в методе "[Создание/изменение подписки](https://dev.dellin.ru/api/orders/webhook/)".
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Типы событий (v1/webhooks/events)
+sortPriority: 163.0
+url: ${[base_url]}/v1/webhooks/events
+urlParameters: []

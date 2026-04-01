@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_MibJFDnxJf
+createdAt: 2026-04-01T11:13:13.748086100
+updatedAt: 2026-04-01T11:13:13.748086100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_iHkdQZ9qnf
+authentication: {}
+authenticationType: null
+body:
+  text: "{   \r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n   \"orderID\":\"345235\"\r\n}"
+bodyType: application/json
+description: '[Удаление заказа из избранного](https://dev.dellin.ru/api/order/favorites/#_header12)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Удаление заказа из избранного (v2/favorites/delete.json)
+sortPriority: 82.0
+url: ${[base_url]}/v2/favorites/delete.json
+urlParameters: []

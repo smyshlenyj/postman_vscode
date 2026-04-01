@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_G5nJTbJyvG
+createdAt: 2026-04-01T11:13:13.755064300
+updatedAt: 2026-04-01T11:13:13.755064300
+workspaceId: wk_NG5F6DYzr7
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Управление заказом
+sortPriority: 53.0

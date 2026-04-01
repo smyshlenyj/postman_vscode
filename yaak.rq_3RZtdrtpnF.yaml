@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_3RZtdrtpnF
+createdAt: 2026-04-01T11:13:13.751412400
+updatedAt: 2026-04-01T11:13:13.751412500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_AZ9Pyd2ZWi
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"serviceKind\": \"auto\",\r\n    \"periodFrom\": \"2025-03-18T22:11:21\"\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Параметры негабаритного груза (v1/oversized_cargo_thresholds.json)
+sortPriority: 140.0
+url: ${[base_url]}/v1/oversized_cargo_thresholds.json
+urlParameters: []

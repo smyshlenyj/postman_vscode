@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_DweQgpsUsv
+createdAt: 2026-04-01T11:13:13.756590500
+updatedAt: 2026-04-01T11:13:13.756590500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_5fFeCaxwuE
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Поиск терминалов
+sortPriority: 107.0

@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_u7Tuu2USrU
+createdAt: 2026-04-01T11:13:13.757834300
+updatedAt: 2026-04-01T11:13:13.757834400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_6a6asMmZYc
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Параметры для статистического отчета
+sortPriority: 152.0

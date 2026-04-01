@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_bRnMNUdxqi
+createdAt: 2026-04-01T11:13:13.747967100
+updatedAt: 2026-04-01T11:13:13.747967300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_Ryrd9GJCJj
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"345235\"\r\n}"
+bodyType: application/json
+description: '[Добавление в Избранное](https://dev.dellin.ru/api/order/favorites/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Добавление в Избранное (v2/favorites/add.json)
+sortPriority: 80.0
+url: ${[base_url]}/v2/favorites/add.json
+urlParameters: []

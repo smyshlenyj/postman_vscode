@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_FX4T2FVdnm
+createdAt: 2026-04-01T11:13:13.752571
+updatedAt: 2026-04-01T11:13:13.752571100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_4tjYSREfGS
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"format\": \"80x50\",\r\n    \"orders\": [\r\n        {\r\n            \"orderID\": \"111111\",\r\n            \"cargoPlaces\": [\r\n                {\r\n                    \"cargoPlace\": \"123123\",\r\n                    \"amount\": 1\r\n                },\r\n                {\r\n                    \"cargoPlace\": \"22222\",\r\n                    \"amount\": 1\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Передача артикулов грузовых мест по массиву заказов (v2/request/cargo/shipment_labels/batch.json)
+sortPriority: 166.0
+url: ${[base_url]}/v2/request/cargo/shipment_labels/batch.json
+urlParameters: []

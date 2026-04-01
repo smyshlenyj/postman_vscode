@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_sUqBAsjHgm
+createdAt: 2026-04-01T11:13:13.752280100
+updatedAt: 2026-04-01T11:13:13.752280400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_hyqse2xyAa
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}\r\n"
+bodyType: application/json
+description: "[https://dev.dellin.ru/api/catalogs/directories/#_header26](https://dev.dellin.ru/api/catalogs/directories/#_header26)\n\nМетод позволяет получить список всех использующихся в компании видов упаковки. Для получения списка упаковок с учётом параметров груза следует использовать методы \"[Доступные упаковки](https://dev.dellin.ru/api/catalogs/available-packages/)\" и \"[Справочник дополнительных услуг](https://dev.dellin.ru/api/catalogs/directories/#/v1/public/request_services)\" Используется в методах:\n\n- \"[Проверка ограничений](https://dev.dellin.ru/api/catalogs/request-conditions/)\";\n    \n- \"[Доступные упаковки](https://dev.dellin.ru/api/catalogs/available-packages/)\""
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Виды упаковки (v1/references/packages.json)
+sortPriority: 159.0
+url: ${[base_url]}/v1/references/packages.json
+urlParameters: []

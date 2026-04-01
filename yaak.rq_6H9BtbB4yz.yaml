@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_6H9BtbB4yz
+createdAt: 2026-04-01T11:13:13.746096300
+updatedAt: 2026-04-01T11:13:13.746096400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cTaVvyn25J
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"ids\":[\r\n      1,\r\n      2\r\n   ]\r\n}"
+bodyType: application/json
+description: '[Удаление подписок](https://dev.dellin.ru/api/orders/webhook/#_header22)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Удаление подписок (v1/webhooks/delete.json)
+sortPriority: 52.0
+url: ${[base_url]}/v1/webhooks/delete.json
+urlParameters: []

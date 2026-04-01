@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_uWqwhJAuts
+createdAt: 2026-04-01T11:13:13.749856400
+updatedAt: 2026-04-01T11:13:13.749856500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_nx5mZPq8Rb
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: '[Справочник населенных пунктов с ограничениями по оплате](https://dev.dellin.ru/api/places/directories/#_header12)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Справочник населенных пунктов с ограничениями по оплате (v1/public/cities_cashless_only.json)
+sortPriority: 113.0
+url: ${[base_url]}/v1/public/cities_cashless_only.json
+urlParameters: []

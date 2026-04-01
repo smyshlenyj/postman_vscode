@@ -1,0 +1,28 @@
+type: http_request
+model: http_request
+id: rq_xC265Mehxn
+createdAt: 2026-04-01T11:13:13.745860200
+updatedAt: 2026-04-01T11:13:13.745860300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cTaVvyn25J
+authentication: {}
+authenticationType: null
+body:
+  text: "// В адрес метода вместо {id} следует подставить идентификатор подписки.\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"orderNumber\":\"8216702228554\",\r\n   \"page\":2,\r\n   \"perPage\":10\r\n}"
+bodyType: application/json
+description: |-
+  [Список заказов из подписки](https://dev.dellin.ru/api/orders/webhook/#_header52)
+
+  Сервис позволяет по идентификатору подписки получить список номеров добавленных в нее заказов либо узнать, добавлен ли в нее заказ с определенным номером.
+
+  В адрес метода вместо {id} следует подставить идентификатор подписки.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Список заказов из подписки (v1/webhooks/{id}/orders.json)
+sortPriority: 50.0
+url: ${[base_url]}/v1/webhooks/{id}/orders.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_m5vd24ewi8
+createdAt: 2026-04-01T11:13:13.748553900
+updatedAt: 2026-04-01T11:13:13.748554
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_EZuzic5LQU
+authentication: {}
+authenticationType: null
+body:
+  text: "{   \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"addressID\":1\r\n}"
+bodyType: application/json
+description: '[Получение списка контактных лиц и телефонов](https://dev.dellin.ru/api/book/contact-details/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Получение списка контактных лиц и телефонов (v2/book/contacts.json)
+sortPriority: 89.0
+url: ${[base_url]}/v2/book/contacts.json
+urlParameters: []

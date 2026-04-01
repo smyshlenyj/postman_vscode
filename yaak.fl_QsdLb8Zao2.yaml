@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_QsdLb8Zao2
+createdAt: 2026-04-01T11:13:13.754793300
+updatedAt: 2026-04-01T11:13:13.754793600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_NRDj8SASpr
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Журнал заказов
+sortPriority: 36.0

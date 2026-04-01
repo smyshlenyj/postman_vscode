@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_NyrBA6qQmg
+createdAt: 2026-04-01T11:13:13.750232200
+updatedAt: 2026-04-01T11:13:13.750232300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_4xuvWeDQ2m
+authentication: {}
+authenticationType: null
+body:
+  text: "{  \r\n \"appkey\": \"${[appkey]}\",\r\n   \"query\":\"пр-т Московский 94\",\r\n   \"city_code\":\"7800000000000000000000000\",\r\n   \"count\":\"10\",\r\n   \"mode\":\"pretty\"\r\n}"
+bodyType: application/json
+description: '[Получение подсказок](https://dev.dellin.ru/api/places/address-selection/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Получение подсказок (suggest_address.json)
+sortPriority: 119.0
+url: ${[base_url]}/v1/suggest_address.json
+urlParameters: []

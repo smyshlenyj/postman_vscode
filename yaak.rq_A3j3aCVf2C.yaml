@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_A3j3aCVf2C
+createdAt: 2026-04-01T11:13:13.746216400
+updatedAt: 2026-04-01T11:13:13.746216400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_nosqM8oVT3
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"999999990\"\r\n}"
+bodyType: application/json
+description: '[Повтор заказа](https://dev.dellin.ru/api/order/repeat/)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Повтор заказа (v2/request/repeat.json)
+sortPriority: 55.0
+url: ${[base_url]}/v2/request/repeat.json
+urlParameters: []

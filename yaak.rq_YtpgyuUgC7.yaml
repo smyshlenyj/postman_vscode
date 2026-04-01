@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_YtpgyuUgC7
+createdAt: 2026-04-01T11:13:13.746986900
+updatedAt: 2026-04-01T11:13:13.746987
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_hqoHdMC2HH
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"1900395024773\",\r\n    \"members\": {\r\n        \"sender\": {\r\n            \"contactIDs\": [\r\n                15637261,\r\n                15638153,\r\n                15638154\r\n            ],\r\n            \"phoneIDs\": [\r\n                19501308,\r\n                19501311,\r\n                19501312\r\n            ],\r\n            \"contactPersons\": [\r\n                {\r\n                    \"name\": \"senderContact1\"\r\n                },\r\n                {\r\n                    \"name\": \"senderContact2\"\r\n                },\r\n                {\r\n                    \"name\": \"senderContact3\"\r\n                }\r\n            ],\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"number\": \"79620000000\",\r\n                    \"ext\": \"3567\"\r\n                },\r\n                {\r\n                    \"number\": \"79510000000\"\r\n                },\r\n                {\r\n                    \"number\": \"79500000000\"\r\n                }\r\n            ]\r\n        },\r\n        \"receiver\": {\r\n            \"contactIDs\": [\r\n                15638146\r\n            ],\r\n            \"phoneIDs\": [\r\n                19501297\r\n            ],\r\n            \"contactPersons\": [\r\n                {\r\n                    \"name\": \"receiverContact\"\r\n                }\r\n            ],\r\n            \"phoneNumbers\": [\r\n                {\r\n                    \"number\": \"79520000000\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}"
+bodyType: application/json
+description: '[Изменение контактной информации по заказу](https://dev.dellin.ru/api/order/change-contacts/)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Изменение контактной информации по заказу (v3/orders/change_contacts.json)
+sortPriority: 63.0
+url: ${[base_url]}/v3/orders/change_contacts.json
+urlParameters: []

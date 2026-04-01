@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_WDP3PqCzWm
+createdAt: 2026-04-01T11:13:13.749562300
+updatedAt: 2026-04-01T11:13:13.749562300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_DweQgpsUsv
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"code\": \"7800000000000000000000000\",\r\n    \"cityid\": \"2423\",\r\n    \"search\": \"Санкт-Петербург\",\r\n    \"direction\": \"derival\",\r\n    \"maxCargoDimensions\": {\r\n        \"length\": 3.0,\r\n        \"width\": 3.0,\r\n        \"height\": 3.0,\r\n        \"weight\": 3.0,\r\n        \"maxVolume\": 3.0,\r\n        \"totalVolume\": 3.0,\r\n        \"totalWeight\": 3.0\r\n    },\r\n    \"express\": true,\r\n    \"freeStorageDays\": \"2\"\r\n}"
+bodyType: application/json
+description: Параметры: "code", "cityID", "search" являются взаимоисключающими.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск терминалов (v1/public/request_terminals.json)
+sortPriority: 108.0
+url: ${[base_url]}/v1/public/request_terminals.json
+urlParameters: []

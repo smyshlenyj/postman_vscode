@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_MXqgdEHXQA
+createdAt: 2026-04-01T11:13:13.752668300
+updatedAt: 2026-04-01T11:13:13.752668500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_4tjYSREfGS
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderIDs\": [\r\n        \"12345\",\r\n        \"67890\"\r\n    ]\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Получение этикеток на груз по массиву заказов (v2/request/cargo/shipment_labels/get/batch.json)
+sortPriority: 167.0
+url: ${[base_url]}/v2/request/cargo/shipment_labels/get/batch.json
+urlParameters: []

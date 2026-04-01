@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_hjhQVLuhZP
+createdAt: 2026-04-01T11:13:13.743770600
+updatedAt: 2026-04-01T11:13:13.743770800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cjdjr3AKF7
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"produceDate\": \"2017-02-20\",\r\n    \"produceTime\": \"09:00\",\r\n    \"derival\": {\r\n        \"counteragentID\": 5775755,\r\n        \"addressID\": 4545885\r\n    },\r\n    \"arrival\": {\r\n        \"counteragentID\": 5353453,\r\n        \"addressID\": 6523423\r\n    },\r\n    \"sender\": {\r\n        \"counteragentID\": 5775755,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        }\r\n    },\r\n    \"receiver\": {\r\n        \"counteragent_id\": 5775755,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        }\r\n    },\r\n    \"third\": {\r\n        \"counteragentID\": 9878696,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        }\r\n    },\r\n    \"payer\": \"third\",\r\n    \"paymentType\": \"cash\",\r\n    \"promocode\": \"promo123\",\r\n    \"mailback\": \"test@mail.ru\",\r\n    \"smsback\": \"79214587878\",\r\n    \"comment\": \"test test\",\r\n    \"cargoName\": \"Запчасти для трактора\",\r\n    \"packed\": \"0x9a7f11408f4957d7494570820fcf4549\",\r\n    \"requester\": \"5775755\",\r\n    \"role\": \"third\",\r\n    \"noFullAccess\": \"false\",\r\n    \"statedValue\": 100.90,\r\n    \"loading\": true,\r\n    \"unloading\": false,\r\n    \"forwarder\": false,\r\n    \"carType\": 216,\r\n    \"manipulator\": true,\r\n    \"toCenter\": true,\r\n    \"outerDistance\": 20.5,\r\n    \"hazardClass\": 1,\r\n    \"rentTime\": 5,\r\n    \"removeCover\": false\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Почасовая аренда транспорта (v1/customers/request_hr.json)
+sortPriority: 21.0
+url: ${[base_url]}/v1/customers/request_hr.json
+urlParameters: []

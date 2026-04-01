@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_MTqonDWgYU
+createdAt: 2026-04-01T11:13:13.743524700
+updatedAt: 2026-04-01T11:13:13.743524900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_FNTJpKMvgU
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"produceDate\": \"2017-02-20\",\r\n    \"truckCapacity\": \"2\",\r\n    \"sender\": {\r\n        \"counteragentID\": 5775755,\r\n        \"addressID\": 4545885,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        },\r\n        \"worktimeStart\": \"09:00\",\r\n        \"worktimeEnd\": \"18:00\",\r\n        \"breakStart\": \"12:00\",\r\n        \"breakEnd\": \"13:00\",\r\n        \"untentType\": 1\r\n    },\r\n    \"receiver\": {\r\n        \"counteragentID\": 5775755,\r\n        \"addressID\": 4545885,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        },\r\n        \"worktimeStart\": \"10:00\",\r\n        \"worktimeEnd\": \"20:00\",\r\n        \"breakStart\": \"14:00\",\r\n        \"breakEnd\": \"14:30\",\r\n        \"untentType\": 2\r\n    },\r\n    \"transitPoints\": [\r\n        {\r\n            \"counteragentID\": 5775755,\r\n            \"addressID\": 4545885,\r\n            \"worktimeStart\": \"10:00\",\r\n            \"worktimeEnd\": \"20:00\",\r\n            \"breakStart\": \"14:00\",\r\n            \"breakEnd\": \"14:30\",\r\n            \"untentType\": 2\r\n        },\r\n        {\r\n            \"counteragentID\": 5775755,\r\n            \"addressID\": 4545885,\r\n            \"worktimeStart\": \"10:00\",\r\n            \"worktimeEnd\": \"20:00\",\r\n            \"breakStart\": \"14:00\",\r\n            \"breakEnd\": \"14:30\",\r\n            \"untentType\": 3\r\n        }\r\n    ],\r\n    \"third\": {\r\n        \"counteragentID\": 5775755,\r\n        \"contact\": 3465688,\r\n        \"contactList\": [\r\n            12312343,\r\n            54364565\r\n        ],\r\n        \"phone\": 4656889,\r\n        \"phoneNumbers\": [\r\n            31234343,\r\n            36456565\r\n        ],\r\n        \"dataForReceipt\": {\r\n            \"phone\": \"+79ХХХХХХХХХ\",\r\n            \"email\": \"test@mail.ru\"\r\n        }\r\n    },\r\n    \"statedValue\": 100.90,\r\n    \"loading\": true,\r\n    \"unloading\": false,\r\n    \"adSend\": false,\r\n    \"adReturn\": true,\r\n    \"payer\": \"third\",\r\n    \"paymentType\": \"cash\",\r\n    \"promocode\": \"promo123\",\r\n    \"mailback\": \"test@mail.ru\",\r\n    \"smsback\": \"79211231234\",\r\n    \"comment\": \"test test\"\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Перевозка малотоннажным транспортом (v1/customers/request_ts.json)
+sortPriority: 19.0
+url: ${[base_url]}/v1/customers/request_ts.json
+urlParameters: []

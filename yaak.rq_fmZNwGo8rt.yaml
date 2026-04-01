@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_fmZNwGo8rt
+createdAt: 2026-04-01T11:13:13.744145
+updatedAt: 2026-04-01T11:13:13.744145200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_q5cmj2SfCL
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"requestIDs\": [\r\n        \"1111\",\r\n        \"2222\",\r\n        \"3333\"\r\n    ],\r\n    \"comment\": \"Текст комментария\"\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Оформление пакетного заказа (v2/batch_request.json)
+sortPriority: 28.0
+url: ${[base_url]}/v2/batch_request.json
+urlParameters: []

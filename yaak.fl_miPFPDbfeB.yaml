@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_miPFPDbfeB
+createdAt: 2026-04-01T11:13:13.757184900
+updatedAt: 2026-04-01T11:13:13.757185100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_KukPrBzPUR
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Подбор времени приезда водителя
+sortPriority: 127.0

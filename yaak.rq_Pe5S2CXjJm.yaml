@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_Pe5S2CXjJm
+createdAt: 2026-04-01T11:13:13.744243
+updatedAt: 2026-04-01T11:13:13.744243100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zkzrEdEcyx
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"batchRequestID\": 12345\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Отмена пакетного заказа (v2/batch_request/cancel.json)
+sortPriority: 30.0
+url: ${[base_url]}/v2/batch_request/cancel.json
+urlParameters: []

@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_CCBAfZBH3B
+createdAt: 2026-04-01T11:13:13.751062600
+updatedAt: 2026-04-01T11:13:13.751062700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_BuotqpToSn
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"arrivalPoint\": \"7700000000000000000000000\",\r\n    \"derivalPoint\": \"7800000000000000000000000\",\r\n    \"length\": 1,\r\n    \"width\": 1,\r\n    \"height\": 1,\r\n    \"weight\": 1,\r\n    \"quantity\": 1\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/available-packages/](https://dev.dellin.ru/api/catalogs/available-packages/)
+
+  Метод возвращает список доступных упаковок по переданным параметрам.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Доступные упаковки (v1/public/packages_available.json)
+sortPriority: 133.0
+url: ${[base_url]}/v1/public/packages_available.json
+urlParameters: []

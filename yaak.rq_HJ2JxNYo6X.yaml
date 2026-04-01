@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_HJ2JxNYo6X
+createdAt: 2026-04-01T11:13:13.750865600
+updatedAt: 2026-04-01T11:13:13.750865700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_miPFPDbfeB
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"docID\": \"2000085063763\",\r\n    \"delivery\": {\r\n        \"arrival\": {\r\n            \"produceDate\": \"2024-11-03\",\r\n            //\"addressID\": 3357,*В запросе обязательно должен присутствовать один из взаимоисключающих параметров: \"addressID\", \"address\" или \"city\"\r\n            \"address\": {\r\n                \"search\": \"Омская обл., Омск, Ленина, 5\"\r\n                //\"street\": \"5500000100005970000000000\",  Параметр \"search\" и набор параметров \"street\", \"house\", \"building\" и \"structure\" являются взаимоисключающими\r\n                //\"house\": \"5\",\r\n                //\"building\": \"1\",\r\n                //\"structure\": \"4\",\r\n                //\"flat\": \"1\"\r\n            }\r\n            //\"city\": \"5500000100000000000000000\"\r\n        }\r\n    }\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/catalogs/time-interval/#_header16](https://dev.dellin.ru/api/catalogs/time-interval/#_header16)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Интервалы передачи груза на адресе получателя (v2/request_delivery/address/time_interval.json)
+sortPriority: 129.0
+url: ${[base_url]}/v2/request_delivery/address/time_interval.json
+urlParameters: []

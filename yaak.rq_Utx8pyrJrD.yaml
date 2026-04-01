@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_Utx8pyrJrD
+createdAt: 2026-04-01T11:13:13.751328800
+updatedAt: 2026-04-01T11:13:13.751328900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zwcgmwF8Cs
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"search\": \"пи\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/freight-types/#_header11](https://dev.dellin.ru/api/catalogs/freight-types/#_header11)
+
+  Характер груза: поиск по строке (перевозка еврофурой)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск характера груза FTL (v1/ftl/freight_types.json)
+sortPriority: 138.0
+url: ${[base_url]}/v1/ftl/freight_types.json
+urlParameters: []

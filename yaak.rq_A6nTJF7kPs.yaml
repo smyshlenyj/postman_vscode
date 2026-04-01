@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_A6nTJF7kPs
+createdAt: 2026-04-01T11:13:13.745088400
+updatedAt: 2026-04-01T11:13:13.745088400
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_htHNp6Mz8G
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n   \"orderID\":\"2000395000025\" //Номер заказа, по которому необходимо получить данные \r\n}"
+bodyType: application/json
+description: '[История изменений заказа](https://dev.dellin.ru/api/orders/history/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: История изменений заказа (v3/orders/history.json)
+sortPriority: 41.0
+url: ${[base_url]}/v3/orders/history.json
+urlParameters: []

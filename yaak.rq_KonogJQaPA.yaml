@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_KonogJQaPA
+createdAt: 2026-04-01T11:13:13.751977700
+updatedAt: 2026-04-01T11:13:13.751977800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_u7Tuu2USrU
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}\r\n"
+bodyType: application/json
+description: "[https://dev.dellin.ru/api/catalogs/directories/#_header14](https://dev.dellin.ru/api/catalogs/directories/#_header14)\n\nФайл, расположенный по ссылке из ответа метода, содержит следующие колонки:\n\n- name - наименование параметра (ключ; на латинице);\n    \n- caption - название параметра (на кириллице)."
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Параметры для статистического отчета (v1/public/report_params.json)
+sortPriority: 153.0
+url: ${[base_url]}/v1/public/report_params.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_GoGFFSdQPF
+createdAt: 2026-04-01T11:13:13.744837500
+updatedAt: 2026-04-01T11:13:13.744837600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_QsdLb8Zao2
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n   \"docIds\":[\r\n      \"19-00085281151\",\r\n      \"19-00085281152\"\r\n   ],\r\n   \"orderNumber\":\"1234567889\",\r\n   \"orderDate\":\"2019-11-02\",\r\n   \"barcode\":\"1345678\",\r\n   \"cargoPlaces\":[\r\n      \"3252235\"\r\n   ], \r\n   \"shipmentLabelCargoPlace\":\"Артикул1223657\",\r\n   \"dateStart\":\"2019-11-11 10:10\",\r\n   \"dateEnd\":\"2019-11-12 10:10\",\r\n   \"states\":\"pickup\",\r\n   \"page\":1,\r\n   \"lastUpdate\":\"2019-11-12 10:10\",\r\n   \"orderBy\":\"ordered_at\",\r\n   \"orderDatesAdditional\":true\r\n}"
+bodyType: application/json
+description: '[Журнал заказов](https://dev.dellin.ru/api/orders/search/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Журнал заказов (v3/orders.json)
+sortPriority: 37.0
+url: ${[base_url]}/v3/orders.json
+urlParameters: []

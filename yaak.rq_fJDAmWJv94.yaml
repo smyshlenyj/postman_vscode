@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_fJDAmWJv94
+createdAt: 2026-04-01T11:13:13.750965400
+updatedAt: 2026-04-01T11:13:13.750965500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_8raCzs9Aii
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"blocks\": [\r\n        \"day_to_day\",\r\n        \"packages\",\r\n        \"loadings\",\r\n        \"insurance\"\r\n    ],\r\n   \"derivalPoint\": \"5500000100000000000000000\", //Передача одного из взаимоисключающих параметров \"derivalPoint\" или \"derivalSearch\" является обязательной\r\n    \"derivalSearch\": \"Омская обл., Омск, Ленина, 5\",\r\n    \"arrivalPoint\": \"5900000100000000000000000\", //Передача одного из взаимоисключающих параметров \"arrivalPoint\" или \"arrivalSearch\" является обязательной\r\n    \"arrivalSearch\": \"Пермский край, Пермь, ул. Якутская, д. 35\",\r\n    \"volume\": 6,\r\n    \"weight\": 30,\r\n    \"length\": 3,\r\n    \"width\": 2,\r\n    \"height\": 1,\r\n    \"quantity\": 2,\r\n    \"derivalTerminalID\": 122,\r\n    \"arrivalTerminalID\": 325,\r\n    \"deliveryType\": 1,\r\n    \"derivalDoor\": true,\r\n    \"arrivalDoor\": true\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/catalogs/request-conditions/](https://dev.dellin.ru/api/catalogs/request-conditions/)
+
+  Метод позволяет получить информацию об ограничениях и возможных значениях параметров в зависимости от условий заказа.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Проверка ограничений (v1/public/request_conditions.json)
+sortPriority: 131.0
+url: ${[base_url]}/v1/public/request_conditions.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_WutQQHS46M
+createdAt: 2026-04-01T11:13:13.745470200
+updatedAt: 2026-04-01T11:13:13.745470200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cTaVvyn25J
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"id\": \"2\",\r\n   \"url\": \"https://webhook.site\",\r\n   \"eventTypes\": [\r\n      \"order.state.pickup\"\r\n   ],\r\n   \"orderRoles\": [\r\n      \"sender\"\r\n   ],\r\n   \"state\": \"enabled\"\r\n}"
+bodyType: application/json
+description: '[Создание/изменение подписки](https://dev.dellin.ru/api/orders/webhook/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Создание/изменение подписки (v1/webhooks/update.json)
+sortPriority: 47.0
+url: ${[base_url]}/v1/webhooks/update.json
+urlParameters: []

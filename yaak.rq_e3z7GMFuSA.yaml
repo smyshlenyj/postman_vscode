@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_e3z7GMFuSA
+createdAt: 2026-04-01T11:13:13.751594800
+updatedAt: 2026-04-01T11:13:13.751594900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_VqhATDoZaQ
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}\r\n"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/catalogs/directories/#_header10](https://dev.dellin.ru/api/catalogs/directories/#_header10)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Характер груза (v1/public/freight_types.json)
+sortPriority: 145.0
+url: ${[base_url]}/v1/public/freight_types.json
+urlParameters: []

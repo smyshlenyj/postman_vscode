@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_dMyebob5j7
+createdAt: 2026-04-01T11:13:13.744348500
+updatedAt: 2026-04-01T11:13:13.744348600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_XGMAe3nSXW
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"batchRequestID\": 12345,\r\n    \"carNumber\": \"С690ТН55\",\r\n    \"driverName\": \"Иванов Петр Викторович\"\r\n}   "
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Передача данных водителя и машины (v2/batch_request/update.json)
+sortPriority: 32.0
+url: ${[base_url]}/v2/batch_request/update.json
+urlParameters: []

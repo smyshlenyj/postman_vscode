@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_mot32w5G9q
+createdAt: 2026-04-01T11:13:13.753357600
+updatedAt: 2026-04-01T11:13:13.753357700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_AGWJFmhTts
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\"\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Справочник этикеток типов упаковки (v1/references/marking/packaging_marks.json)
+sortPriority: 176.0
+url: ${[base_url]}/v1/references/marking/packaging_marks.json
+urlParameters: []

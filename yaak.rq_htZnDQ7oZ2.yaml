@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_htZnDQ7oZ2
+createdAt: 2026-04-01T11:13:13.748447600
+updatedAt: 2026-04-01T11:13:13.748447600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_whoHP6tkGR
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"country\":\"0x8f51001438c4d49511dbd774581edb7a\",\r\n   \"query\":\"итал\",\r\n   \"juridical\":true\r\n}"
+bodyType: application/json
+description: '[Поиск контрагентов](https://dev.dellin.ru/api/book/counteragents/#_header30)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск контрагентов (v2/book/counteragents/search.json)
+sortPriority: 87.0
+url: ${[base_url]}/v2/book/counteragents/search.json
+urlParameters: []

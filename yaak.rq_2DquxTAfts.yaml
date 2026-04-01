@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_2DquxTAfts
+createdAt: 2026-04-01T11:13:13.742939600
+updatedAt: 2026-04-01T11:13:13.742939700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_Hupkt7LKbW
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"arrivalHouse\": 4,\r\n    \"arrivalPoint\": \"7700000000000000000000000\",\r\n    \"arrivalSearch\": \"Омская обл., Омск, Ленина, 5\",\r\n    \"docSQLUid\": \"0xb4960050569468bb11e7aa87cebf3d88\",\r\n    \"calculateDate\": \"2017-10-15\",\r\n    \"arrivalPeriodVisit\": {\r\n        \"start\": \"09:00\",\r\n        \"end\": \"18:00\"\r\n    },\r\n    \"arrivalServices\": [\r\n        \"0xb83b7589658a3851440a853325d1bf69\"\r\n    ],\r\n    \"arrivalFixedTimeVisit\": true,\r\n    \"arrivalUnLoading\": [\r\n        {\r\n            \"uid\": \"0xa77fcf6a449164ed490133777a68bd51\"\r\n        },\r\n        {\r\n            \"uid\": \"0xadf1fc002cb8a9954298677b22dbde12\",\r\n            \"value\": \"4\"\r\n        },\r\n        {\r\n            \"uid\": \"0x9a0d647ddb11ebbd4ddaaf3b1d9f7b74\",\r\n            \"value\": \"58\"\r\n        }\r\n    ],\r\n    \"promocode\": \"promo123\",\r\n    \"requester\": 1\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Калькулятор услуги Доставка до адреса (v1/public/calculator_sf.json)
+sortPriority: 12.0
+url: ${[base_url]}/v1/public/calculator_sf.json
+urlParameters: []

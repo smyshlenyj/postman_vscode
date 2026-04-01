@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_kP8yFiefHZ
+createdAt: 2026-04-01T11:13:13.750044
+updatedAt: 2026-04-01T11:13:13.750044
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_xtNJCaD9r2
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры, которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{  \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"cityID\":\"200555\",\r\n   \"code\":\"1000000100000010000000000\",\r\n   \"q\":\"мос\",\r\n   \"limit\":10\r\n}"
+bodyType: application/json
+description: '[Поиск населённых пунктов](https://dev.dellin.ru/api/places/search/#_header12)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Поиск населённых пунктов (v2/public/kladr.json)
+sortPriority: 116.0
+url: ${[base_url]}/v2/public/kladr.json
+urlParameters: []

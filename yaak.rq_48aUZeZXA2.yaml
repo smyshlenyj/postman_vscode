@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_48aUZeZXA2
+createdAt: 2026-04-01T11:13:13.750553400
+updatedAt: 2026-04-01T11:13:13.750553500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_VzEdZHbFzu
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"delivery\": {\r\n        \"derival\": {\r\n            \"terminalID\": 1\r\n        }\r\n    }\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/catalogs/dispatch-dates/#_header15](https://dev.dellin.ru/api/catalogs/dispatch-dates/#_header15)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Доступные даты отправки от терминала (v2/request/terminal/dates.json)
+sortPriority: 124.0
+url: ${[base_url]}/v2/request/terminal/dates.json
+urlParameters: []

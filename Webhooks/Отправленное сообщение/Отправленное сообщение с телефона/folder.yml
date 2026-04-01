@@ -1,7 +1,0 @@
-info:
-  name: Отправленное сообщение с телефона
-  type: folder
-  seq: 1
-
-request:
-  auth: inherit

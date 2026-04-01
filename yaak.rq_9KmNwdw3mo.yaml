@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_9KmNwdw3mo
+createdAt: 2026-04-01T11:13:13.749263600
+updatedAt: 2026-04-01T11:13:13.749263700
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_pen9MZpvua
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"cauid\":\"00000000-0000-0000-0000-000000000000\"\r\n}"
+bodyType: application/json
+description: '[Периоды взаиморасчётов](https://dev.dellin.ru/api/payments/periods/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Периоды взаиморасчётов (v2/mutual_period.json)
+sortPriority: 101.0
+url: ${[base_url]}/v2/mutual_period.json
+urlParameters: []

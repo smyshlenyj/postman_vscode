@@ -1,0 +1,28 @@
+type: http_request
+model: http_request
+id: rq_crReHVcZh3
+createdAt: 2026-04-01T11:13:13.750656200
+updatedAt: 2026-04-01T11:13:13.750656300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_XZpCCjMgGB
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"docID\":\"2000085063763\",\r\n   \"delivery\":{\r\n      \"arrival\":{\r\n         \"addressID\":3357, //В запросе обязательно должен присутствовать один из взаимоисключающих параметров: \"addressID\", \"address\" или \"city\"\r\n         \"address\":{\r\n            \"search\":\"Омская обл., Омск, Ленина, 5\",\r\n            \"street\":\"5500000100005970000000000\", //Параметр \"search\" и набор параметров \"street\", \"house\", \"building\" и \"structure\" являются взаимоисключающими\r\n            \"house\":\"5\",\r\n            \"building\":\"1\",\r\n           \"structure\":\"4\",\r\n            \"flat\":\"1\"\r\n         },\r\n         \"city\":\"5500000100000000000000000\",\r\n          \"time\":{\r\n            \"exactTime\":true\r\n         },\r\n          \"handling\":{\r\n            \"freightLift\":true,\r\n            \"toFloor\":10,\r\n            \"carry\":100\r\n         },\r\n         \r\n          \"requirements\":[\r\n            \"0xabb9c63c596b08f94c3664c930e77778\",\r\n            \"0x88f93a2c37f106d94ff9f7ada8efe886\",\r\n            \"0x818e8ff1eda1abc349318a478659af08\",\r\n            \"0xb83b7589658a3851440a853325d1bf69\",\r\n            \"0x92fce2284f000b0241dad7c2e88b1655\",\r\n            \"0x9951e0ff97188f6b4b1b153dfde3cfec\"\r\n         ]\r\n      }\r\n   }\r\n}"
+bodyType: application/json
+description: |-
+  Сервис позволяет получить список возможных дат доставки при оформлении заявки на доставку от терминала до адреса получателя (см. метод "[Дополнение заказа доставкой до адреса получателя](https://dev.dellin.ru/api/ordering/sfrequest/)"). Сервис доступен только авторизованным пользователям.
+
+  ---
+
+  Ссылка на документацию: [https://dev.dellin.ru/api/catalogs/delivery-dates/](https://dev.dellin.ru/api/catalogs/delivery-dates/)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Подбор даты доставки (v2/request_delivery/address/dates.json)
+sortPriority: 126.0
+url: ${[base_url]}/v2/request_delivery/address/dates.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_eiYve6rjFz
+createdAt: 2026-04-01T11:13:13.753448200
+updatedAt: 2026-04-01T11:13:13.753448300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_AGWJFmhTts
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"type\":\"jpg\",\r\n   \"oneFile\":false,\r\n   \"per\":10,\r\n   \"page\":1,\r\n   \"packagingMarks\":[\r\n      {\r\n         \"name\":\"pallet\",\r\n         \"format\":\"a4\",\r\n         \"count\":2\r\n      }\r\n   ]\r\n}"
+bodyType: application/json
+description: При формировании отдельных файлов (то есть если значение параметра  "type" - "jpg" или "png") список ссылок для скачивания файлов размещается на нескольких страницах по 30 ссылок на страницу. При необходимости можно изменить количество ссылок на странице (см. описание параметра "per"), а также передать номер конкретной страницы, данные которой необходимо получить в ответе (см. описание параметра "page")
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Получение этикеток типов упаковки (v1/references/marking/packaging_marks/get.json)
+sortPriority: 177.0
+url: ${[base_url]}/v1/references/marking/packaging_marks/get.json
+urlParameters: []

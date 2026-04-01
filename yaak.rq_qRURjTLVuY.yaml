@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_qRURjTLVuY
+createdAt: 2026-04-01T11:13:13.748191300
+updatedAt: 2026-04-01T11:13:13.748191500
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_whoHP6tkGR
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n   \"withAnonym\":\"false\",\r\n   \"isAnonym\":\"false\",\r\n   \"counteragentIds\":[\r\n      1,\r\n      2,\r\n      3\r\n   ]\r\n}"
+bodyType: application/json
+description: '[Список контрагентов из адресной книги](https://dev.dellin.ru/api/book/counteragents/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Список контрагентов из адресной книги (v2/book/counteragents.json)
+sortPriority: 85.0
+url: ${[base_url]}/v2/book/counteragents.json
+urlParameters: []

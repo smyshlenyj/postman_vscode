@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_LAYosctM6U
+createdAt: 2026-04-01T11:13:13.745192900
+updatedAt: 2026-04-01T11:13:13.745193
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zgXjqNTNrz
+authentication: {}
+authenticationType: null
+body:
+  text: "{   \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"docUID\":\"0xad339ac31247666145816f2aeb4935ab\",\r\n   \"mode\":\"bill\"\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/orders/print/#_header2](https://dev.dellin.ru/api/orders/print/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Печатные формы документов (v1/printable.json)
+sortPriority: 43.0
+url: ${[base_url]}/v1/printable.json
+urlParameters: []

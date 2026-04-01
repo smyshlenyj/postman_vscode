@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_zvSDBsJbEM
+createdAt: 2026-04-01T11:13:13.742576200
+updatedAt: 2026-04-01T11:13:13.742576300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_mxtryQTfai
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\":\"${[appkey]}\",\r\n   \"sessionID\":\"${[sessionID]}\"\r\n}"
+bodyType: application/json
+description: |-
+  [https://dev.dellin.ru/api/auth/login/#_header22](https://dev.dellin.ru/api/auth/login/#_header22)
+
+  Отслеживание состояния текущей сессии можно использовать для предварительного возобновления сессии перед отправкой запроса к API Личного кабинета.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Данные сессии (v3/auth/session_info.json)
+sortPriority: 5.0
+url: ${[base_url]}/v3/auth/session_info.json
+urlParameters: []

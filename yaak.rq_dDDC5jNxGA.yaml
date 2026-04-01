@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_dDDC5jNxGA
+createdAt: 2026-04-01T11:13:13.747848900
+updatedAt: 2026-04-01T11:13:13.747848900
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_UQQqwpFTMC
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"345235\",\r\n    \"resumeDate\": \"2024-12-25\"\r\n}"
+bodyType: application/json
+description: '[Запрос на возобновление](https://dev.dellin.ru/api/order/suspend/#_header12)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Запрос на возобновление (v3/orders/resume.json)
+sortPriority: 77.0
+url: ${[base_url]}/v3/orders/resume.json
+urlParameters: []

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_aCh8Mi3CqK
+createdAt: 2026-04-01T11:13:13.742461200
+updatedAt: 2026-04-01T11:13:13.742461200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_mxtryQTfai
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\":\"${[appkey]}\",\r\n   \"sessionID\":\"${[sessionID]}\" //ID сессии для запросов к данным Личного кабинета\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/auth/login/#_header12](https://dev.dellin.ru/api/auth/login/#_header12)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Удаление сессии авторизации (v3/auth/logout.json)
+sortPriority: 4.0
+url: ${[base_url]}/v3/auth/logout.json
+urlParameters: []

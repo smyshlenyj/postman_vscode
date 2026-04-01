@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_GFRHzpfe7z
+createdAt: 2026-04-01T11:13:13.747126900
+updatedAt: 2026-04-01T11:13:13.747127
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_zjrFv6qmdc
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"00000000\",\r\n    \"variant\": \"address\",\r\n    \"addressID\": 457824578,\r\n    \"address\": {\r\n        \"street\": \"7800000000004380000000000\",\r\n        \"search\": \"Санкт-Петербург, ул. Ленина, 1\",\r\n        \"house\": \"4\",\r\n        \"building\": \"3\",\r\n        \"structure\": \"лит. А\",\r\n        \"flat\": \"214а\"\r\n    },\r\n    \"produce_date\": \"2020-10-01\",\r\n    \"time\": {\r\n        \"worktimeStart\": \"09:00\",\r\n        \"worktimeEnd\": \"18:00\",\r\n        \"breakStart\": \"12:30\",\r\n        \"breakEnd\": \"13:30\",\r\n        \"exactTime\": true\r\n    },\r\n    \"contactIDs\": [\r\n        12345678,\r\n        78456123\r\n    ],\r\n    \"contactPersons\": [\r\n        {\r\n            \"name\": \"Иван Иванович\"\r\n        },\r\n        {\r\n            \"name\": \"Петр Петрович\"\r\n        }\r\n    ],\r\n    \"phoneIDs\": [\r\n        98765412,\r\n        65478921\r\n    ],\r\n    \"phoneNumbers\": [\r\n        {\r\n            \"number\": \"79213332211\",\r\n            \"ext\": \"0123\"\r\n        }\r\n    ]\r\n}"
+bodyType: application/json
+description: '[Изменение адреса и времени отправки](https://dev.dellin.ru/api/order/change-pickup/)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Изменение адреса и времени отправки (v3/orders/change_pickup.json)
+sortPriority: 65.0
+url: ${[base_url]}/v3/orders/change_pickup.json
+urlParameters: []

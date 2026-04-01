@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_kzNRYaATgV
+createdAt: 2026-04-01T11:13:13.742786400
+updatedAt: 2026-04-01T11:13:13.742786600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_eTU5qcjXhi
+authentication: {}
+authenticationType: null
+body:
+  text: "//В запросе представлены все параметры которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку.\r\n{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"delivery\": {\r\n        \"deliveryType\": {\r\n            \"type\": \"auto\"\r\n        },\r\n        \"arrival\": {\r\n            \"variant\": \"terminal\",\r\n            \"terminalID\": \"1\",\r\n            \"addressID\": 238577,\r\n            \"address\": {\r\n                \"search\": \"59.924501, 30.241762\",\r\n                \"street\": \"7800000000008850000000000\",\r\n                \"house\": \"5\",\r\n                \"building\": \"1\",\r\n                \"structure\": \"лит.А\",\r\n                \"flat\": \"214а\"\r\n            },\r\n            \"city\": \"7800000000000000000000000\",\r\n            \"time\": {\r\n                \"worktimeStart\": \"9:30\",\r\n                \"worktimeEnd\": \"19:00\",\r\n                \"breakStart\": \"12:00\",\r\n                \"breakEnd\": \"13:00\",\r\n                \"exactTime\": false\r\n            },\r\n            \"handling\": {\r\n                \"freightLift\": true,\r\n                \"toFloor\": 2,\r\n                \"carry\": 50\r\n            },\r\n            \"requirements\": [\r\n                \"0x9951e0ff97188f6b4b1b153dfde3cfec\",\r\n                \"0x88f93a2c37f106d94ff9f7ada8efe886\"\r\n            ]\r\n        },\r\n        \"derival\": {\r\n            \"produceDate\": \"2019-11-08\",\r\n            \"variant\": \"address\",\r\n            \"terminalID\": \"1\",\r\n            \"addressID\": 238577,\r\n            \"address\": {\r\n                \"search\": \"Москва, Юности, 5\",\r\n                \"street\": \"7700000000004650000000000\",\r\n                \"house\": \"5\",\r\n                \"building\": \"2\",\r\n                \"structure\": \"лит.Б\",\r\n                \"flat\": \"21\"\r\n            },\r\n            \"time\": {\r\n                \"worktimeEnd\": \"19:30\",\r\n                \"worktimeStart\": \"9:00\",\r\n                \"breakStart\": \"12:00\",\r\n                \"breakEnd\": \"13:00\",\r\n                \"exactTime\": false\r\n            },\r\n            \"handling\": {\r\n                \"freightLift\": true,\r\n                \"toFloor\": 40,\r\n                \"carry\": 243\r\n            },\r\n            \"requirements\": [\r\n                \"0x9951e0ff97188f6b4b1b153dfde3cfec\",\r\n                \"0x88f93a2c37f106d94ff9f7ada8efe886\"\r\n            ]\r\n        },\r\n        \"packages\": [\r\n            {\r\n                \"uid\": \"0xa6a7bd2bf950e67f4b2cf7cc3a97c111\",\r\n                \"count\": 1\r\n            }\r\n        ],\r\n        \"accompanyingDocuments\": [\r\n            {\r\n                \"action\": \"send\"\r\n            },\r\n            {\r\n                \"action\": \"return\"\r\n            }\r\n        ]\r\n    },\r\n    \"members\": {\r\n        \"requester\": {\r\n            \"role\": \"sender\",\r\n            \"uid\": \"ae62f076-d602-4341-b691-45bf8dfe4a10\"\r\n        }\r\n    },\r\n    \"cargo\": {\r\n        \"quantity\": 4,\r\n        \"length\": 1,\r\n        \"width\": 1,\r\n        \"height\": 1,\r\n        \"weight\": 12,\r\n        \"totalVolume\": 1,\r\n        \"totalWeight\": 12,\r\n        \"oversizedWeight\": 0,\r\n        \"oversizedVolume\": 0,\r\n        \"freightUID\": \"0x82e6000423b423b711da7d15445d42cb\",\r\n        \"hazardClass\": 7.2,\r\n        \"insurance\": {\r\n            \"statedValue\": 15477.34,\r\n            \"term\": false\r\n        }\r\n    },\r\n    \"payment\": {\r\n        \"type\": \"cash\",\r\n        \"promocode\": \"promo123\",\r\n        \"paymentCity\": \"7700000000000000000000000\",\r\n        \"paymentCitySearch\": {\r\n            \"search\": \"Москва\"\r\n        }\r\n    }\r\n}"
+bodyType: application/json
+description: Сервис позволяет получить подробную информацию о стоимости и сроках интересующего способа перевозки.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Калькулятор стоимости и сроков перевозки (v2/calculator.json)
+sortPriority: 10.0
+url: ${[base_url]}/v2/calculator.json
+urlParameters: []

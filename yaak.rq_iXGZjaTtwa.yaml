@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_iXGZjaTtwa
+createdAt: 2026-04-01T11:13:13.748967100
+updatedAt: 2026-04-01T11:13:13.748967300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_35c59JeAY7
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры, которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"counteragentID\":1,\r\n   \"search\":\"Омская обл., Омск, Ленина, 5\",\r\n   \"street\":\"5500000100005970000000000\",\r\n   \"house\":\"5\",\r\n   \"building\":\"1\",\r\n   \"structure\":\"лит. А\",\r\n   \"flat\":\"214а\",\r\n   \"terminalID\":39,\r\n   \"addressID\":1\r\n}"
+bodyType: application/json
+description: '[Создание и редактирование адреса](https://dev.dellin.ru/api/book/addresses/#_header13)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Создание и редактирование адреса (v2/book/address/update.json)
+sortPriority: 94.0
+url: ${[base_url]}/v2/book/address/update.json
+urlParameters: []

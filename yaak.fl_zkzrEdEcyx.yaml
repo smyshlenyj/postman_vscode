@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_zkzrEdEcyx
+createdAt: 2026-04-01T11:13:13.754575700
+updatedAt: 2026-04-01T11:13:13.754575800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_JTsfj4NLAg
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Отмена пакетного заказа
+sortPriority: 29.0

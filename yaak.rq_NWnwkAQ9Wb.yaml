@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_NWnwkAQ9Wb
+createdAt: 2026-04-01T11:13:13.753160100
+updatedAt: 2026-04-01T11:13:13.753160200
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_7KXZtuXXay
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\"\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Справочник этикеток с манипуляционными знаками (v1/references/marking/handling_marks.json)
+sortPriority: 173.0
+url: ${[base_url]}/v1/references/marking/handling_marks.json
+urlParameters: []

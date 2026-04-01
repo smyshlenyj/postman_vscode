@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_8raCzs9Aii
+createdAt: 2026-04-01T11:13:13.757237600
+updatedAt: 2026-04-01T11:13:13.757237800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_KukPrBzPUR
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Проверка ограничений
+sortPriority: 130.0

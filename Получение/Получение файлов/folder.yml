@@ -1,7 +1,0 @@
-info:
-  name: Получение файлов
-  type: folder
-  seq: 2
-
-request:
-  auth: inherit

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_ghRcUZqKC9
+createdAt: 2026-04-01T11:13:13.748328200
+updatedAt: 2026-04-01T11:13:13.748328300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_whoHP6tkGR
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры, которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"isAnonym\":\"true\",\r\n   \"form\":\"0x8F51001438C4D49511DBD774581EDB80\",\r\n   \"name\":\"Ромашка\",\r\n   \"inn\":\"1234567890\",\r\n   \"counteragentID\":1,\r\n   \"juridicalAddress\":{\r\n      \"search\":\"Омская обл., Омск, Ленина, 5\",\r\n      \"street\":\"7800000000004380000000000\",\r\n      \"house\":\"4\",\r\n      \"building\":\"2\",\r\n      \"structure\":\"3А\",\r\n      \"flat\":\"Б-234\"\r\n   },\r\n   \"document\":{\r\n      \"type\":\"passport\",\r\n      \"serial\":\"XXXX\",\r\n      \"number\":\"XXXX\",\r\n      \"date\":\"YYYY-MM-DD\"\r\n   },\r\n   \"dataForReceipt\":{\r\n      \"phone\":\"+79000000000\",\r\n      \"email\":\"test@mail.ru\"\r\n   },\r\n   \"phone\":\"70000000000\",\r\n   \"email\":\"petro@mail.com\"\r\n}"
+bodyType: application/json
+description: '[Создание и редактирование контрагентов](https://dev.dellin.ru/api/book/counteragents/#_header13)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Создание и редактирование контрагентов (v2/book/counteragent/update.json)
+sortPriority: 86.0
+url: ${[base_url]}/v2/book/counteragent/update.json
+urlParameters: []

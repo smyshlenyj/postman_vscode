@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_wRUx3hw2eY
+createdAt: 2026-04-01T11:13:13.751881800
+updatedAt: 2026-04-01T11:13:13.751882
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_3CYYbmpgYw
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}\r\n"
+bodyType: application/json
+description: "[https://dev.dellin.ru/api/catalogs/directories/#_header13](https://dev.dellin.ru/api/catalogs/directories/#_header13)\n\nФайл, расположенный по ссылке из ответа метода, содержит следующие колонки:\n\n- UID - уникальный идентификатор документа для получения груза;\n    \n- name - наименование документа для получения груза;\n    \n- day_to_day - признак, определяющий возможность получения груза день в день по данному документу."
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Документы для получения груза (v1/public/documents_for_receive.json)
+sortPriority: 151.0
+url: ${[base_url]}/v1/public/documents_for_receive.json
+urlParameters: []

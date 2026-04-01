@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_x8ZWhbp2Vp
+createdAt: 2026-04-01T11:13:13.744624500
+updatedAt: 2026-04-01T11:13:13.744624800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_FRLcxR5bVB
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"requestID\": \"111111\",\r\n    \"cargoPlaces\": [\r\n        {\r\n            \"cargoPlace\": \"123123\",\r\n            \"amount\": 1,\r\n            \"volume\": 1,\r\n            \"weight\": 2.3,\r\n            \"length\": 1,\r\n            \"width\": 1,\r\n            \"height\": 1\r\n        },\r\n        {\r\n            \"cargoPlace\": \"22222\",\r\n            \"amount\": 1,\r\n            \"volume\": 1,\r\n            \"weight\": 2.3,\r\n            \"length\": 1,\r\n            \"width\": 1,\r\n            \"height\": 1\r\n        }\r\n    ]\r\n}"
+bodyType: application/json
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Передача данных по грузовым местам (v2/request/cargo.json)
+sortPriority: 34.0
+url: ${[base_url]}/v2/request/cargo.json
+urlParameters: []

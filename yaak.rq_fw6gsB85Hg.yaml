@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_fw6gsB85Hg
+createdAt: 2026-04-01T11:13:13.749357
+updatedAt: 2026-04-01T11:13:13.749357100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_GPR9VFfmgv
+authentication: {}
+authenticationType: null
+body:
+  text: "{  \r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"send\":true,\r\n   \"request\":[\r\n      {  \r\n         \"docid\":\"1\",\r\n         \"counteragent_type\":\"physical\",\r\n         \"counteragent_data\":\"Иванов Иван Иванович\",\r\n         \"phone\":\"+79812223355\"\r\n      },\r\n      {  \r\n         \"docid\":\"2\",\r\n         \"counteragent_type\":\"juridical\",\r\n         \"counteragent_data\":\"1112223333\",\r\n         \"email\":\"test@test.ru\"\r\n      },\r\n      {  \r\n         \"docid\":\"3\",\r\n         \"counteragent_uid\":\"00000000-0000-0000-0000-000000000000\",\r\n         \"email\":\"test2@test.ru\"\r\n      }\r\n   ]\r\n}"
+bodyType: application/json
+description: '[Получение ссылки на оплату](https://dev.dellin.ru/api/payments/link/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Получение ссылки на оплату (v1/payments/link.json)
+sortPriority: 103.0
+url: ${[base_url]}/v1/payments/link.json
+urlParameters: []

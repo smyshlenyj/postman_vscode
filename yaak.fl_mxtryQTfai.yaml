@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_mxtryQTfai
+createdAt: 2026-04-01T11:13:13.753774
+updatedAt: 2026-04-01T11:13:13.753774100
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_VqeLZxNSHb
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: Авторизация пользователя
+sortPriority: 1.0

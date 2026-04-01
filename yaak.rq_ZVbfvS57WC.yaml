@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_ZVbfvS57WC
+createdAt: 2026-04-01T11:13:13.748666300
+updatedAt: 2026-04-01T11:13:13.748666300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_EZuzic5LQU
+authentication: {}
+authenticationType: null
+body:
+  text: "// В запросе представлены все параметры, которые принимает метод. Часть параметров взаимоисключающие. Функциональные запросы ниже по списку\r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"addressID\":4,\r\n   \"contactID\":244,\r\n   \"contact\":\"Иван\"\r\n}"
+bodyType: application/json
+description: '[Создание и редактирование контактных лиц](https://dev.dellin.ru/api/book/contact-details/#_header13)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Создание и редактирование контактных лиц (v2/book/contact/update.json)
+sortPriority: 90.0
+url: ${[base_url]}/v2/book/contact/update.json
+urlParameters: []

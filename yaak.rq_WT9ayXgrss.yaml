@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_WT9ayXgrss
+createdAt: 2026-04-01T11:13:13.748872500
+updatedAt: 2026-04-01T11:13:13.748872600
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_35c59JeAY7
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\",\r\n   \"counteragentID\":1\r\n}"
+bodyType: application/json
+description: '[Список адресов](https://dev.dellin.ru/api/book/addresses/#_header2)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Список адресов (v2/book/addresses.json)
+sortPriority: 93.0
+url: ${[base_url]}/v2/book/addresses.json
+urlParameters: []

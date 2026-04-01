@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_htHNp6Mz8G
+createdAt: 2026-04-01T11:13:13.754900100
+updatedAt: 2026-04-01T11:13:13.754900300
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_NRDj8SASpr
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: История изменений заказа
+sortPriority: 40.0

@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_5QdEw2cZRx
+createdAt: 2026-04-01T11:13:13.753061900
+updatedAt: 2026-04-01T11:13:13.753062
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_4tjYSREfGS
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\",\r\n    \"sessionID\": \"${[sessionID]}\",\r\n    \"orderID\": \"2000395000025\",\r\n    \"per\": 10,\r\n    \"page\": 1\r\n}"
+bodyType: application/json
+description: Список статусов размещается на нескольких страницах по 30 статусов на страницу. При необходимости можно изменить количество статусов на странице (см. описание параметра "per"), а также передать номер конкретной страницы, данные которой необходимо получить в ответе (см. описание параметра "page")
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Информация о статусе грузового места (v3/orders/cargo/statuses.json)
+sortPriority: 171.0
+url: ${[base_url]}/v3/orders/cargo/statuses.json
+urlParameters: []

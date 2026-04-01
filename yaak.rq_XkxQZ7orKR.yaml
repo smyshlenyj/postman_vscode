@@ -1,0 +1,30 @@
+type: http_request
+model: http_request
+id: rq_XkxQZ7orKR
+createdAt: 2026-04-01T11:13:13.745964700
+updatedAt: 2026-04-01T11:13:13.745964800
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_cTaVvyn25J
+authentication: {}
+authenticationType: null
+body:
+  text: "// Если необходимо получить информацию о конкретной подписке, в адрес метода вместо {id} следует подставить идентификатор подписки.\r\n// Если необходимо получить информацию обо всех подписках, в адресе метода параметр {id} следует удалить. \r\n\r\n{\r\n   \"appkey\": \"${[appkey]}\",\r\n   \"sessionID\": \"${[sessionID]}\"\r\n}"
+bodyType: application/json
+description: |-
+  [Информация о подписках](https://dev.dellin.ru/api/orders/webhook/#_header42)
+
+  Данный метод можно вызвать, обратившись либо к адресу [https://api.dellin.ru/v1/webhooks/{id},](https://api.dellin.ru/v1/webhooks/%7Bid%7D,) либо к адресу [https://api.dellin.ru/v1/webhooks](https://api.dellin.ru/v1/webhooks)
+
+  Если необходимо получить информацию о конкретной подписке, в адрес метода вместо {id} следует подставить идентификатор подписки: [https://api.dellin.ru/v1/webhooks/{id}](https://api.dellin.ru/v1/webhooks/%7Bid%7D,)
+
+  Если необходимо получить информацию обо всех подписках, в адресе метода параметр {id} следует удалить: [https://api.dellin.ru/v1/webhooks](https://api.dellin.ru/v1/webhooks)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Информация о подписках (v1/webhooks/{id}.json)
+sortPriority: 51.0
+url: ${[base_url]}/v1/webhooks/{id}.json
+urlParameters: []

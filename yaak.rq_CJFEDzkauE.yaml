@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_CJFEDzkauE
+createdAt: 2026-04-01T11:13:13.752080900
+updatedAt: 2026-04-01T11:13:13.752081
+workspaceId: wk_NG5F6DYzr7
+folderId: fl_DhoihZw5VK
+authentication: {}
+authenticationType: null
+body:
+  text: "{\r\n    \"appkey\": \"${[appkey]}\"\r\n}"
+bodyType: application/json
+description: '[https://dev.dellin.ru/api/catalogs/directories/#_header15](https://dev.dellin.ru/api/catalogs/directories/#_header15)'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Виды загрузки (v1/references/load_types.json)
+sortPriority: 155.0
+url: ${[base_url]}/v1/references/load_types.json
+urlParameters: []
